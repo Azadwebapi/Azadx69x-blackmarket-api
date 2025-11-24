@@ -10,7 +10,7 @@ module.exports = {
   config: {
     name: "help",
     version: "1.2",
-    author: "Azad 💥",//author change korle tor marechudi 
+    author: "Azadx69x",//author change korle tor marechudi 
     countDown: 5,
     role: 0,
     description: { en: "View command usage" },
@@ -28,14 +28,13 @@ module.exports = {
         : "👑 Bot Admins";
     }
 
-    // Fetch GIF as attachment
     async function getGifAttachment(url) {
       const filePath = path.join(__dirname, "temp_gif.gif");
       if (!fs.existsSync(filePath)) {
         const res = await axios.get(url, { responseType: "arraybuffer" });
         fs.writeFileSync(filePath, Buffer.from(res.data));
       }
-      return [fs.createReadStream(filePath)]; // return as array
+      return [fs.createReadStream(filePath)];
     }
 
     const headerMsg = `💎 Total Commands: ${commands.size}
@@ -43,7 +42,6 @@ module.exports = {
 👤 Developer: Az ad 👻🩸
 💡 Tip: Type '${prefix}help <command>' for detailed info.\n\n`;
 
-    // SINGLE COMMAND HELP
     if (cmd) {
       const cfg = cmd.config;
       const name = cfg.name;
@@ -72,7 +70,6 @@ module.exports = {
       return message.reply({ body: msg, attachment: attachments });
     }
 
-    // PAGINATED COMMAND LIST (10 per page)
     const page = parseInt(args[0]) || 1;
     const numberOfOnePage = 10;
 
