@@ -1,6 +1,12 @@
 {
   "cmdName": [
     {
+      "cmd": "admin",
+      "author": "Azadx69x",
+      "update": "2025-11-07",
+      "status": "on"
+    },
+    {
       "cmd": "sesg",
       "author": "Azadx69x",
       "update": "2025-11-07",
