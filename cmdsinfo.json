@@ -7,7 +7,7 @@
       "status": "on"
     },
     {
-      "cmd": "sesg",
+      "cmd": "segs",
       "author": "Azadx69x",
       "update": "2025-11-07",
       "status": "on"
@@ -40,6 +40,54 @@
       "cmd": "up",
       "author": "Azadx69x",
       "update": "2025-11-07",
+      "status": "on"
+    },
+    {
+      "cmd": "up4",
+      "author": "Azadx69x",
+      "update": "2025-12-17",
+      "status": "on"
+    },
+    {
+      "cmd": "album",
+      "author": "Azadx69x",
+      "update": "2025-12-17",
+      "status": "on"
+    },
+    {
+      "cmd": "bank",
+      "author": "Azadx69x",
+      "update": "2025-12-17",
+      "status": "on"
+    },
+    {
+      "cmd": "balance",
+      "author": "Azadx69x",
+      "update": "2025-12-17",
+      "status": "on"
+    },
+    {
+      "cmd": "count",
+      "author": "Azadx69x",
+      "update": "2025-12-17",
+      "status": "on"
+    },
+    {
+      "cmd": "file",
+      "author": "Azadx69x",
+      "update": "2025-12-17",
+      "status": "on"
+    },
+    {
+      "cmd": "host",
+      "author": "Azadx69x",
+      "update": "2025-12-17",
+      "status": "on"
+    },
+    {
+      "cmd": "ping",
+      "author": "Azadx69x",
+      "update": "2025-12-17",
       "status": "on"
     },
     {
@@ -212,12 +260,6 @@
     },
     {
       "cmd": "ytstalk",
-      "author": "Saimx69x",
-      "update": "2025-11-03",
-      "status": "on"
-    },
-    {
-      "cmd": "pending",
       "author": "Saimx69x",
       "update": "2025-11-03",
       "status": "on"
