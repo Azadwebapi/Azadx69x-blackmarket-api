@@ -53,30 +53,23 @@
 
 ---
 
-### 🎯 **𝙷𝙾𝚆 𝚃𝙾 𝚄𝙿𝙶𝚁𝙰𝙳𝙴?**
+### ⚙️ **Command Structure**
 
 ```bash
-# 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚝𝚘 𝚌𝚑𝚎𝚌𝚔 & 𝚞𝚙𝚐𝚛𝚊𝚍𝚎 𝚕𝚎𝚟𝚎𝚕:
-!level          # 𝙲𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚕𝚎𝚟𝚎𝚕
-!permissions    # 𝚅𝚒𝚎𝚠 𝚢𝚘𝚞𝚛 𝚙𝚎𝚛𝚖𝚜
-!admin add      # 𝙰𝚍𝚍 𝚊𝚍𝚖𝚒𝚗 (𝙻𝚟 𝟸+)
-!premium add    # 𝙰𝚍𝚍 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 (𝙻𝚟 𝟹+)
+module.exports = {  
+  config: {  
+    name: "command_name",                // 🔹 Command Name  
+    version: "1.0",                      // 🔸 Version  
+    author:"Azadx69x",                   // 👨‍💻 Developer  
+    role: 4,                             // 🔐 Required Access Level  
+    usePrefix: true,                     // ⛓️ Prefix Requirement  
+    description: "Command Description",   // 📝 Functionality  
+    guide: "Usage Guide",                // 📘 Command Syntax  
+    category: "Utility",                 // 🧰 Function Category  
+    cooldowns: 3                         // ⏳ Execution Delay (seconds)  
+  }  
+};
 
-
-
----
-
-🎨 𝚇𝟼𝟿𝚇 𝙴𝚇𝙲𝙻𝚄𝚂𝙸𝚅𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂
-
-🚀 𝙽𝚎𝚠 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜:
-
-```bash
-!x69x help      # 𝚂𝚑𝚘𝚠 𝚑𝚎𝚕𝚙 𝚖𝚎𝚗𝚞
-!x69x info      # 𝙱𝚘𝚝 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗
-!x69x version   # 𝚂𝚑𝚘𝚠 𝚟𝚎𝚛𝚜𝚒𝚘𝚗
-!x69x ping      # 𝙲𝚑𝚎𝚌𝚔 𝚙𝚒𝚗𝚐
-!x69x credits   # 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 𝚌𝚛𝚎𝚍𝚒𝚝𝚜
-!azad stats     # 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 𝚜𝚝𝚊𝚝𝚜
 ```
 ---
 
