@@ -12,16 +12,16 @@
 
 <p align="center">
   <a href="https://github.com/ncazad/Azadx69x">
-    <img title="Stars" src="https://img.shields.io/github/stars/ncazad/Azadx69x?color=FF1493&style=for-the-badge&logo=starship">
+    <img title="Stars" src="https://img.shields.io/github/stars/ncazad/Azadx69x?style=flat-square&color=FF69B4&logo=starship&logoColor=FFFFFF">
   </a>
   <a href="https://github.com/ncazad/Azadx69x/forks">
-    <img title="Forks" src="https://img.shields.io/github/forks/ncazad/Azadx69x?color=00FFFF&style=for-the-badge&logo=git">
+    <img title="Forks" src="https://img.shields.io/github/forks/ncazad/Azadx69x?style=flat-square&color=00CED1&logo=git&logoColor=FFFFFF">
   </a>
   <a href="https://github.com/ncazad/Azadx69x">
-    <img title="Repo Size" src="https://img.shields.io/github/repo-size/ncazad/Azadx69x?style=for-the-badge&color=FF00FF&logo=files">
+    <img title="Repo Size" src="https://img.shields.io/github/repo-size/ncazad/Azadx69x?style=flat-square&color=8A2BE2&logo=files&logoColor=FFFFFF">
   </a>
   <a href="https://profile-counter.glitch.me/ncazad/count.svg">
-     <img src="https://img.shields.io/badge/👁️-VISITORS-9400D3?style=for-the-badge&logo=eye">
+     <img src="https://img.shields.io/badge/👁️-VISITORS-7B68EE?style=flat-square&logo=eye&logoColor=FFFFFF">
   </a>
 </p>
 
