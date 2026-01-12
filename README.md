@@ -90,23 +90,13 @@
 </p>
 
 ---
+🗃️ Credits
 
-📖 𝙲𝚁𝙴𝙳𝙸𝚃𝚂
+🏆 Original Creator:
+- 👨‍💻 NTKhang03 — Goat-Bot-V2
 
-🏆 𝙾𝚛𝚒𝚐𝚒𝚗𝚊𝚕 𝙲𝚛𝚎𝚊𝚝𝚘𝚛𝚜:
-
-· 𝙲𝚈𝙱𝙴𝚁-𝚄𝙻𝙻𝙰𝚂𝙷 - 𝙲𝚈𝙱𝙴𝚁-𝙶𝙾𝙰𝚃-𝙱𝙾𝚃
-· 𝚗𝚝𝚔𝚑𝚊𝚗𝚐𝟶𝟹 - 𝙶𝚘𝚊𝚝-𝙱𝚘𝚝-𝚟𝟸
-
-👑 𝚇𝟼𝟿𝚇 𝚃𝙴𝙰𝙼:
-
-𝚁𝙾𝙻𝙴 𝙼𝙴𝙼𝙱𝙴𝚁 𝙴𝙼𝙾𝙹𝙸
-𝙻𝚎𝚊𝚍 𝙳𝚎𝚟 𝙰𝚣𝚊𝚍𝚇𝟼𝟿𝚇 👨‍💻
-𝙵𝚘𝚛𝚔 𝙾𝚠𝚗𝚎𝚛 𝚗𝚌𝚊𝚣𝚊𝚍 🐱
-𝙱𝚊𝚜𝚎 𝙲𝚘𝚍𝚎 𝙲𝚢𝚋𝚎𝚛-𝚄𝚕𝚕𝚊𝚜𝚑 🔧
-𝚃𝚎𝚜𝚝𝚎𝚛 𝚇𝟼𝟿𝚇 𝚃𝚎𝚊𝚖 🧪
-𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙲𝚘𝚖𝚖𝚞𝚗𝚒𝚝𝚢 🤝
-
+👑 Modified By:
+- 👨‍💻 Azadx69x — X69X-BOT-V2
 ---
 
 📜 𝙻𝙸𝙲𝙴𝙽𝚂𝙴
@@ -120,7 +110,7 @@ update by Azadx69x
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
-in the Software without modification, including without limitation the rights
+in the Software without modification, including without liation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is furnished
 to do so, subject to the following conditions:
@@ -131,33 +121,6 @@ all copies or substantial portions of the Software.
 NO DERIVATIVES: This license does not allow for any modifications or derivative
 works based on the Software.
 ```
-
----
-
-🌟 𝚂𝚃𝙰𝚁 𝙷𝙸𝚂𝚃𝙾𝚁𝚈
-
-https://api.star-history.com/svg?repos=ncazad/Azadx69x&type=Date
-
----
-
-🎯 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝚃𝙷𝙴 𝙿𝚁𝙾𝙹𝙴𝙲𝚃
-
-<div align="center">
-
-<a href="https://github.com/ncazad/Azadx69x/stargazers">
-<img src="https://img.shields.io/badge/⭐+𝙶𝙸𝚅𝙴+𝚂𝚃𝙰𝚁-FFD700?style=for-the-badge&logo=star&logoColor=black">
-</a>
-
-<a href="https://github.com/ncazad/Azadx69x/fork">
-<img src="https://img.shields.io/badge/🍴+𝙵𝙾𝚁𝙺+𝚁𝙴𝙿𝙾-00FF00?style=for-the-badge&logo=git-fork&logoColor=black">
-</a>
-
-<a href="https://github.com/ncazad/Azadx69x/issues">
-<img src="https://img.shields.io/badge/🐛+𝚁𝙴𝙿𝙾𝚁𝚃+𝙱𝚄𝙶-FF0000?style=for-the-badge&logo=bug&logoColor=white">
-</a>
-
-</div>
-
 ---
 
 📊 𝙿𝚁𝙾𝙹𝙴𝙲𝚃 𝚂𝚃𝙰𝚃𝚄𝚂
