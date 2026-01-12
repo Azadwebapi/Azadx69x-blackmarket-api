@@ -8,12 +8,12 @@ module.exports = {
   config: {
     name: "developer",
     aliases: ["dev", "developers"],
-    version: "6.0",
+    version: "6.1",
     author: "Azadx69x",
     countDown: 5,
     role: 4,
     description: {
-      en: "Developer management with full profile display"
+      en: "Developer management with clean profile display"
     },
     category: "owner",
     guide: {
@@ -338,7 +338,7 @@ module.exports = {
         ctx.fillStyle = headerGradient;
         ctx.fillRect(0, 0, canvasWidth, 100);
         
-        // Header logo/text only (no theme/dev count text)
+        // Header logo/text only
         ctx.shadowColor = palette.primary;
         ctx.shadowBlur = 20;
         
@@ -479,7 +479,7 @@ module.exports = {
             // Added Date
             ctx.fillText(`📅 Added: ${new Date().toLocaleDateString()}`, infoX, infoY + 165);
             
-            // Status badge
+            // Status badge only (NO "BOT DEVELOPER" text)
             ctx.fillStyle = '#00ff00' + '40';
             ctx.roundRect(infoX + 400, infoY + 20, 120, 40, 10);
             ctx.fill();
@@ -489,13 +489,15 @@ module.exports = {
             ctx.textAlign = 'center';
             ctx.fillText('ACTIVE', infoX + 460, infoY + 46);
             
-            // Role badge
+            // Developer ID Badge (replacing BOT DEVELOPER badge)
             ctx.fillStyle = palette.secondary + '40';
-            ctx.roundRect(infoX + 400, infoY + 70, 150, 40, 10);
+            ctx.roundRect(infoX + 400, infoY + 70, 100, 40, 10);
             ctx.fill();
             
+            ctx.font = 'bold 20px "Segoe UI", Arial, sans-serif';
             ctx.fillStyle = palette.secondary;
-            ctx.fillText('BOT DEVELOPER', infoX + 460, infoY + 70);
+            ctx.textAlign = 'center';
+            ctx.fillText(`ID: ${dev.uid.substring(0, 6)}`, infoX + 450, infoY + 96);
             
             currentY += cardHeight + 30;
             
@@ -605,15 +607,15 @@ module.exports = {
           ctx.fillText(dev.firstName, infoX + 300, infoStartY + 60);
           ctx.fillText(new Date().toLocaleDateString(), infoX + 300, infoStartY + 120);
           
-          // Role badge
+          // Status badge only (NO "ADMIN DEVELOPER" text)
           ctx.fillStyle = palette.secondary + '40';
-          ctx.roundRect(infoX + 500, infoStartY - 30, 200, 50, 15);
+          ctx.roundRect(infoX + 500, infoStartY - 30, 120, 50, 15);
           ctx.fill();
           
           ctx.font = 'bold 24px "Segoe UI", Arial, sans-serif';
           ctx.fillStyle = palette.secondary;
           ctx.textAlign = 'center';
-          ctx.fillText('ADMIN DEVELOPER', infoX + 600, infoStartY + 5);
+          ctx.fillText('✅ VERIFIED', infoX + 560, infoStartY + 5);
           
           currentY += 300;
         }
@@ -802,7 +804,7 @@ module.exports = {
         ctx.font = '20px "Segoe UI", Arial, sans-serif';
         ctx.fillStyle = palette.text;
         ctx.textAlign = 'center';
-        ctx.fillText('X69X BOT V2', canvasWidth / 2, canvasHeight - 30);
+        ctx.fillText('GoatBot v6.1', canvasWidth / 2, canvasHeight - 30);
         
         // Save the image
         const imagePath = path.join(__dirname, 'cache', `dev_system_${Date.now()}.png`);
