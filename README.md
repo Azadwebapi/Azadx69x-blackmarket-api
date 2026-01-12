@@ -4,7 +4,7 @@
 
 </div>
 
-🔥 𝕏𝟞𝟡𝕏 𝔹𝕆𝕋 𝕍𝟚 🔥
+🤖 X69X BOT V2 
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=25&pause=1000&color=00FFFF&center=true&vCenter=true&width=435&lines=X69X+BOT+V2)](https://git.io/typing-svg)
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=25&pause=1000&color=FFD700&center=true&vCenter=true&width=435&lines=MESSENGER+Chat+BOT)](https://git.io/typing-svg)
