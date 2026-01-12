@@ -24,25 +24,19 @@
      <img src="https://img.shields.io/badge/👁️-VISITORS-7B68EE?style=flat-square&logo=eye&logoColor=FFFFFF">
   </a>
 </p>
-
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=ncazad&label=✨+PROFILE+VIEWS&color=FF69B4&style=flat-square" alt="Visitors">
+  <img src="https://komarev.com/ghpvc/?username=ncazad&label=💫+PROFILE+VIEWS&color=FF69B4&style=flat-square" alt="Visitors">
 </p>
 
 <hr style="border: 2px solid #FF00FF; border-radius: 5px;">
 
 <div align="center">
 
-<a href="https://youtube.com/@cyberbotcommunity?si=7wqJsdLBRMvWkWOU">
-  <img src="https://img.shields.io/badge/🎥+WATCH+TUTORIAL-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=black">
-</a>
-
 <a href="https://github.com/ncazad/Azadx69x/fork">
-  <img src="https://img.shields.io/badge/🍴+FORK+NOW-00FF00?style=for-the-badge&logo=github&logoColor=white&labelColor=black">
+  <img src="https://img.shields.io/badge/✅+FORK-00CED1?style=flat-square&logo=github&logoColor=FFFFFF">
 </a>
 
 </div>
-
 ---
 
 🌟 𝙰𝙱𝙾𝚄𝚃 𝕏𝟞𝟡𝕏 𝔹𝕆𝕋 𝕍𝟚
