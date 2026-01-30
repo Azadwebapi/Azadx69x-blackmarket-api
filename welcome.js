@@ -62,6 +62,19 @@ function hexToRgb(hex) {
     } : { r: 0, g: 0, b: 0 };
 }
 
+function drawRoundRect(ctx, x, y, width, height, radius) {
+    if (width < 2 * radius) radius = width / 2;
+    if (height < 2 * radius) radius = height / 2;
+    
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y);
+    ctx.arcTo(x + width, y, x + width, y + height, radius);
+    ctx.arcTo(x + width, y + height, x, y + height, radius);
+    ctx.arcTo(x, y + height, x, y, radius);
+    ctx.arcTo(x, y, x + width, y, radius);
+    ctx.closePath();
+}
+
 async function drawTemplateBackground(ctx, width, height, template) {
     const { bgColor, colors, style } = template;
     
@@ -97,28 +110,28 @@ async function drawTemplateBackground(ctx, width, height, template) {
 function drawGradientBackground(ctx, width, height, colors) {
     const gradient = ctx.createRadialGradient(
         width / 2, height / 2, 0,
-        width / 2, height / 2, width
+        width / 2, height / 2, Math.max(width, height)
     );
     
-    gradient.addColorStop(0, `${colors[0]}20`);
-    gradient.addColorStop(0.5, `${colors[1]}10`);
-    gradient.addColorStop(1, `${colors[2]}05`);
+    gradient.addColorStop(0, `${colors[0]}40`);
+    gradient.addColorStop(0.5, `${colors[1]}20`);
+    gradient.addColorStop(1, `${colors[2]}10`);
     
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
     
     // Add blur circles
-    for(let i = 0; i < 8; i++) {
+    for(let i = 0; i < 5; i++) {
         const x = Math.random() * width;
         const y = Math.random() * height;
-        const radius = Math.random() * 200 + 100;
+        const radius = Math.random() * 150 + 50;
         const color = colors[Math.floor(Math.random() * colors.length)];
         
         const circleGradient = ctx.createRadialGradient(
             x, y, 0,
             x, y, radius
         );
-        circleGradient.addColorStop(0, `${color}30`);
+        circleGradient.addColorStop(0, `${color}20`);
         circleGradient.addColorStop(1, `${color}00`);
         
         ctx.fillStyle = circleGradient;
@@ -130,7 +143,7 @@ function drawGradientBackground(ctx, width, height, colors) {
 
 function drawCyberGrid(ctx, width, height, colors) {
     // Grid lines
-    ctx.strokeStyle = `${colors[0]}20`;
+    ctx.strokeStyle = `${colors[0]}30`;
     ctx.lineWidth = 1;
     
     // Vertical lines
@@ -149,11 +162,11 @@ function drawCyberGrid(ctx, width, height, colors) {
         ctx.stroke();
     }
     
-    // Animated dots effect
-    for(let i = 0; i < 30; i++) {
+    // Glowing dots
+    for(let i = 0; i < 20; i++) {
         const x = Math.random() * width;
         const y = Math.random() * height;
-        const size = Math.random() * 4 + 1;
+        const size = Math.random() * 3 + 1;
         const color = colors[Math.floor(Math.random() * colors.length)];
         
         ctx.fillStyle = color;
@@ -163,13 +176,13 @@ function drawCyberGrid(ctx, width, height, colors) {
         
         // Glow effect
         ctx.shadowColor = color;
-        ctx.shadowBlur = 15;
+        ctx.shadowBlur = 10;
         ctx.fill();
         ctx.shadowBlur = 0;
     }
     
     // Diagonal lines
-    ctx.strokeStyle = `${colors[1]}15`;
+    ctx.strokeStyle = `${colors[1]}20`;
     for(let i = -height; i < width * 2; i += 60) {
         ctx.beginPath();
         ctx.moveTo(i, 0);
@@ -180,46 +193,46 @@ function drawCyberGrid(ctx, width, height, colors) {
 
 function drawNeonGlow(ctx, width, height, colors) {
     // Multiple glow layers
-    const layers = 5;
+    const layers = 3;
     
     for(let layer = 0; layer < layers; layer++) {
-        const offset = layer * 20;
+        const offset = layer * 15;
         const gradient = ctx.createLinearGradient(
             0, offset,
             width, height - offset
         );
         
-        gradient.addColorStop(0, `${colors[0]}${10 + layer * 3}`);
-        gradient.addColorStop(0.5, `${colors[1]}${10 + layer * 3}`);
-        gradient.addColorStop(1, `${colors[2]}${10 + layer * 3}`);
+        gradient.addColorStop(0, `${colors[0]}15`);
+        gradient.addColorStop(0.5, `${colors[1]}15`);
+        gradient.addColorStop(1, `${colors[2]}15`);
         
         ctx.fillStyle = gradient;
-        ctx.globalAlpha = 0.1;
+        ctx.globalAlpha = 0.3;
         ctx.fillRect(0, 0, width, height);
     }
     
     ctx.globalAlpha = 1;
     
-    // Neon tubes effect
-    ctx.strokeStyle = colors[0];
-    ctx.lineWidth = 3;
-    ctx.shadowColor = colors[0];
-    ctx.shadowBlur = 20;
-    
     // Border glow
+    ctx.strokeStyle = colors[0];
+    ctx.lineWidth = 4;
+    ctx.shadowColor = colors[0];
+    ctx.shadowBlur = 15;
     ctx.strokeRect(20, 20, width - 40, height - 40);
     ctx.shadowBlur = 0;
 }
 
 function drawWavePattern(ctx, width, height, colors) {
     // Wave pattern
-    ctx.strokeStyle = `${colors[0]}30`;
+    ctx.strokeStyle = `${colors[0]}40`;
     ctx.lineWidth = 2;
     
-    for(let i = 0; i < height; i += 40) {
+    const waveCount = 8;
+    for(let i = 0; i < waveCount; i++) {
+        const yPos = (height / waveCount) * i;
         ctx.beginPath();
-        for(let x = 0; x <= width; x += 10) {
-            const y = i + Math.sin(x * 0.05 + i * 0.1) * 20;
+        for(let x = 0; x <= width; x += 5) {
+            const y = yPos + Math.sin(x * 0.02 + i * 0.5) * 15;
             if(x === 0) ctx.moveTo(x, y);
             else ctx.lineTo(x, y);
         }
@@ -228,78 +241,105 @@ function drawWavePattern(ctx, width, height, colors) {
     
     // Overlay gradient
     const overlay = ctx.createLinearGradient(0, 0, 0, height);
-    colors.forEach((color, index) => {
-        overlay.addColorStop(index / colors.length, `${color}10`);
-    });
+    overlay.addColorStop(0, `${colors[0]}10`);
+    overlay.addColorStop(0.5, `${colors[1]}10`);
+    overlay.addColorStop(1, `${colors[2]}10`);
     
     ctx.fillStyle = overlay;
     ctx.fillRect(0, 0, width, height);
 }
 
-async function drawUserCard(ctx, userImg, userName, position, width, height, colors) {
-    const { x, y, size, type } = position;
+function drawMeshGradient(ctx, width, height, colors) {
+    // Create mesh points
+    const points = [];
+    const gridSize = 50;
     
-    try {
-        const img = await loadImage(userImg);
-        
-        // Create circular mask
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(x, y, size, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.clip();
-        
-        // Draw image
-        ctx.drawImage(img, x - size, y - size, size * 2, size * 2);
-        ctx.restore();
-        
-        // Border with glow
-        ctx.strokeStyle = colors[0];
-        ctx.lineWidth = 4;
-        ctx.shadowColor = colors[0];
-        ctx.shadowBlur = 15;
-        ctx.beginPath();
-        ctx.arc(x, y, size, 0, Math.PI * 2);
-        ctx.stroke();
-        ctx.shadowBlur = 0;
-        
-        // Name tag
-        ctx.font = 'bold 20px "Segoe UI", Arial, sans-serif';
-        ctx.fillStyle = colors[1];
-        ctx.textAlign = 'center';
-        
-        if(type === 'main') {
-            ctx.fillText(userName, x, y + size + 35);
-        } else if(type === 'addedBy') {
-            ctx.font = '16px "Segoe UI", Arial, sans-serif';
-            ctx.fillText('Added by', x, y + size + 25);
-            ctx.fillText(userName, x, y + size + 45);
-        } else {
-            ctx.fillText(userName, x, y + size + 25);
+    for(let x = 0; x <= width; x += gridSize) {
+        for(let y = 0; y <= height; y += gridSize) {
+            points.push({
+                x: x + Math.random() * 20 - 10,
+                y: y + Math.random() * 20 - 10,
+                color: colors[Math.floor(Math.random() * colors.length)]
+            });
         }
+    }
+    
+    // Draw triangles between points
+    for(let i = 0; i < points.length - 2; i += 3) {
+        if (i + 2 >= points.length) break;
         
-    } catch (err) {
-        // Fallback avatar
-        ctx.fillStyle = colors[2];
+        const p1 = points[i];
+        const p2 = points[i + 1];
+        const p3 = points[i + 2];
+        
+        const gradient = ctx.createLinearGradient(p1.x, p1.y, p3.x, p3.y);
+        gradient.addColorStop(0, `${p1.color}10`);
+        gradient.addColorStop(0.5, `${p2.color}10`);
+        gradient.addColorStop(1, `${p3.color}10`);
+        
+        ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.lineTo(p3.x, p3.y);
+        ctx.closePath();
         ctx.fill();
-        
-        // Initial letter
-        ctx.fillStyle = '#ffffff';
-        ctx.font = `bold ${size}px Arial`;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(userName.charAt(0).toUpperCase(), x, y);
     }
 }
 
-function drawTextEffects(ctx, text, x, y, colors, style = 'normal') {
-    const baseFont = 'bold 48px "Segoe UI", "Arial Rounded MT Bold", Arial, sans-serif';
+function drawMatrixEffect(ctx, width, height, colors) {
+    // Green code rain effect
+    ctx.fillStyle = `${colors[0]}20`;
+    ctx.font = '16px "Courier New", monospace';
     
-    switch(style) {
+    const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    
+    for(let i = 0; i < 50; i++) {
+        const x = Math.random() * width;
+        const y = Math.random() * height;
+        const char = chars[Math.floor(Math.random() * chars.length)];
+        
+        ctx.fillText(char, x, y);
+        
+        // Trail effect
+        for(let j = 1; j <= 3; j++) {
+            ctx.globalAlpha = 0.5 / j;
+            ctx.fillText(char, x, y + j * 20);
+        }
+        ctx.globalAlpha = 1;
+    }
+}
+
+function drawPurpleHaze(ctx, width, height, colors) {
+    // Fog/mist effect
+    for(let i = 0; i < 8; i++) {
+        const x = Math.random() * width;
+        const y = Math.random() * height;
+        const radius = Math.random() * 200 + 100;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        const gradient = ctx.createRadialGradient(
+            x, y, 0,
+            x, y, radius
+        );
+        gradient.addColorStop(0, `${color}30`);
+        gradient.addColorStop(1, `${color}00`);
+        
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+function drawTextWithEffects(ctx, text, x, y, colors, effect = 'gradient') {
+    const baseFont = 'bold 42px "Segoe UI", "Arial", sans-serif';
+    ctx.font = baseFont;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    
+    switch(effect) {
         case 'gradient':
-            ctx.font = baseFont;
             const gradient = ctx.createLinearGradient(x - 150, y, x + 150, y);
             gradient.addColorStop(0, colors[0]);
             gradient.addColorStop(0.5, colors[1]);
@@ -309,16 +349,14 @@ function drawTextEffects(ctx, text, x, y, colors, style = 'normal') {
             break;
             
         case 'glow':
-            ctx.font = baseFont;
             ctx.shadowColor = colors[0];
-            ctx.shadowBlur = 20;
+            ctx.shadowBlur = 15;
             ctx.fillStyle = '#ffffff';
             ctx.fillText(text, x, y);
             ctx.shadowBlur = 0;
             break;
             
         case 'stroke':
-            ctx.font = baseFont;
             ctx.strokeStyle = colors[0];
             ctx.lineWidth = 3;
             ctx.strokeText(text, x, y);
@@ -326,12 +364,7 @@ function drawTextEffects(ctx, text, x, y, colors, style = 'normal') {
             ctx.fillText(text, x, y);
             break;
             
-        case 'double':
-            ctx.font = baseFont;
-            // Shadow layer
-            ctx.fillStyle = colors[1];
-            ctx.fillText(text, x + 3, y + 3);
-            // Main layer
+        default:
             ctx.fillStyle = colors[0];
             ctx.fillText(text, x, y);
             break;
@@ -340,7 +373,7 @@ function drawTextEffects(ctx, text, x, y, colors, style = 'normal') {
 
 async function createModernWelcome(gcImg, userImg, adderImg, userName, userNumber, threadName, adderName) {
     const width = 1200;
-    const height = 700; // Slightly taller for modern layout
+    const height = 650;
     
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext('2d');
@@ -351,222 +384,204 @@ async function createModernWelcome(gcImg, userImg, adderImg, userName, userNumbe
     // Draw template background
     await drawTemplateBackground(ctx, width, height, template);
     
-    // Load images in parallel
-    const imagePromises = [
-        loadImage(gcImg).catch(() => null),
-        loadImage(userImg).catch(() => null),
-        loadImage(adderImg).catch(() => null)
-    ];
+    // Load all images
+    let gcImage, userImage, adderImage;
     
-    const [gcImage, userImage, adderImage] = await Promise.all(imagePromises);
+    try {
+        gcImage = await loadImage(gcImg);
+    } catch {
+        gcImage = null;
+    }
     
-    // Main layout
-    const layoutType = Math.floor(Math.random() * 3); // 3 different layouts
+    try {
+        userImage = await loadImage(userImg);
+    } catch {
+        userImage = null;
+    }
     
-    switch(layoutType) {
-        case 0: // Centered layout
-            // Group icon top center
-            if(gcImage) {
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(width / 2, 150, 80, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.clip();
-                ctx.drawImage(gcImage, width / 2 - 80, 70, 160, 160);
-                ctx.restore();
-                
-                // Glow border
-                ctx.strokeStyle = template.colors[0];
-                ctx.lineWidth = 5;
-                ctx.shadowColor = template.colors[0];
-                ctx.shadowBlur = 20;
-                ctx.beginPath();
-                ctx.arc(width / 2, 150, 85, 0, Math.PI * 2);
-                ctx.stroke();
-                ctx.shadowBlur = 0;
-            }
-            
-            // Welcome text
-            ctx.font = 'bold 68px "Segoe UI", Arial, sans-serif';
-            ctx.fillStyle = template.colors[1];
-            ctx.textAlign = 'center';
-            ctx.fillText('WELCOME', width / 2, 300);
-            
-            // User name with effect
-            drawTextEffects(ctx, userName, width / 2, 380, template.colors, 'gradient');
-            
-            // To group text
-            ctx.font = '32px "Segoe UI", Arial, sans-serif';
-            ctx.fillStyle = '#e2e8f0';
-            ctx.fillText(`to ${threadName}`, width / 2, 440);
-            
-            // User image left
-            if(userImage) {
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(200, 550, 60, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.clip();
-                ctx.drawImage(userImage, 140, 490, 120, 120);
-                ctx.restore();
-            }
-            
-            // Adder image right
-            if(adderImage) {
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(width - 200, 550, 50, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.clip();
-                ctx.drawImage(adderImage, width - 250, 500, 100, 100);
-                ctx.restore();
-            }
-            
-            // Member info
-            ctx.font = '24px "Segoe UI", Arial, sans-serif';
-            ctx.fillStyle = template.colors[2];
-            ctx.fillText(`Member #${userNumber} • Added by ${adderName}`, width / 2, 520);
-            
-            break;
-            
-        case 1: // Asymmetrical layout
-            // Left side group icon
-            if(gcImage) {
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(200, height / 2, 90, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.clip();
-                ctx.drawImage(gcImage, 110, height / 2 - 90, 180, 180);
-                ctx.restore();
-            }
-            
-            // Right side content
-            ctx.textAlign = 'left';
-            ctx.fillStyle = template.colors[0];
-            ctx.font = 'bold 24px "Segoe UI", Arial, sans-serif';
-            ctx.fillText('NEW MEMBER', 400, 200);
-            
-            ctx.fillStyle = '#ffffff';
-            ctx.font = 'bold 56px "Segoe UI", Arial, sans-serif';
-            ctx.fillText(userName, 400, 280);
-            
-            ctx.fillStyle = template.colors[1];
-            ctx.font = '32px "Segoe UI", Arial, sans-serif';
-            ctx.fillText(`joined ${threadName}`, 400, 340);
-            
-            // User image
-            if(userImage) {
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(900, 300, 70, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.clip();
-                ctx.drawImage(userImage, 830, 230, 140, 140);
-                ctx.restore();
-            }
-            
-            // Bottom info bar
-            ctx.fillStyle = `${template.colors[2]}20`;
-            ctx.fillRect(0, height - 120, width, 120);
-            
-            ctx.fillStyle = '#ffffff';
-            ctx.font = 'bold 36px "Segoe UI", Arial, sans-serif';
-            ctx.textAlign = 'center';
-            ctx.fillText(`#${userNumber}`, width / 4, height - 60);
-            
-            ctx.fillText(adderName, width * 3/4, height - 60);
-            
-            ctx.font = '20px "Segoe UI", Arial, sans-serif';
-            ctx.fillStyle = '#94a3b8';
-            ctx.fillText('MEMBER NUMBER', width / 4, height - 90);
-            ctx.fillText('ADDED BY', width * 3/4, height - 90);
-            
-            break;
-            
-        case 2: // Card layout
-            // Main card
-            ctx.fillStyle = '#1e293b90';
+    try {
+        adderImage = await loadImage(adderImg);
+    } catch {
+        adderImage = null;
+    }
+    
+    // Choose random layout
+    const layout = Math.floor(Math.random() * 3);
+    
+    if (layout === 0) {
+        // Layout 1: Centered Design
+        // Group icon at top
+        if (gcImage) {
+            ctx.save();
             ctx.beginPath();
-            ctx.roundRect(100, 100, width - 200, height - 200, 30);
-            ctx.fill();
+            ctx.arc(width / 2, 140, 70, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(gcImage, width / 2 - 70, 70, 140, 140);
+            ctx.restore();
             
-            // Card border
+            // Border
             ctx.strokeStyle = template.colors[0];
-            ctx.lineWidth = 3;
+            ctx.lineWidth = 4;
             ctx.beginPath();
-            ctx.roundRect(100, 100, width - 200, height - 200, 30);
+            ctx.arc(width / 2, 140, 74, 0, Math.PI * 2);
             ctx.stroke();
-            
-            // Center content
-            ctx.textAlign = 'center';
-            
-            // Welcome badge
-            ctx.fillStyle = template.colors[1];
+        }
+        
+        // Welcome text
+        ctx.font = 'bold 56px "Segoe UI", Arial, sans-serif';
+        ctx.fillStyle = template.colors[1];
+        ctx.textAlign = 'center';
+        ctx.fillText('WELCOME', width / 2, 240);
+        
+        // User name
+        drawTextWithEffects(ctx, userName, width / 2, 310, template.colors, 'gradient');
+        
+        // To group
+        ctx.font = '28px "Segoe UI", Arial, sans-serif';
+        ctx.fillStyle = '#e2e8f0';
+        ctx.fillText(`to ${threadName}`, width / 2, 370);
+        
+        // User and adder images
+        if (userImage) {
+            ctx.save();
             ctx.beginPath();
-            ctx.roundRect(width / 2 - 120, 140, 240, 50, 25);
-            ctx.fill();
-            
-            ctx.fillStyle = '#ffffff';
-            ctx.font = 'bold 28px "Segoe UI", Arial, sans-serif';
-            ctx.fillText('🎉 WELCOME 🎉', width / 2, 175);
-            
-            // User info
-            if(userImage) {
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(width / 2, 280, 80, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.clip();
-                ctx.drawImage(userImage, width / 2 - 80, 200, 160, 160);
-                ctx.restore();
-            }
-            
-            ctx.fillStyle = template.colors[2];
-            ctx.font = 'bold 42px "Segoe UI", Arial, sans-serif';
-            ctx.fillText(userName, width / 2, 400);
-            
-            ctx.fillStyle = '#cbd5e1';
-            ctx.font = '28px "Segoe UI", Arial, sans-serif';
-            ctx.fillText(`to ${threadName}`, width / 2, 450);
-            
-            // Bottom section
-            ctx.fillStyle = '#0f172a60';
+            ctx.arc(180, 520, 50, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(userImage, 130, 470, 100, 100);
+            ctx.restore();
+        }
+        
+        if (adderImage) {
+            ctx.save();
             ctx.beginPath();
-            ctx.roundRect(150, 500, width - 300, 80, 20);
-            ctx.fill();
-            
-            ctx.fillStyle = '#ffffff';
-            ctx.font = '24px "Segoe UI", Arial, sans-serif';
-            ctx.fillText(`Member #${userNumber}`, width / 3, 545);
-            ctx.fillText(`Added by ${adderName}`, width * 2/3, 545);
-            
-            break;
+            ctx.arc(width - 180, 520, 45, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(adderImage, width - 225, 475, 90, 90);
+            ctx.restore();
+        }
+        
+        // Info text
+        ctx.font = '22px "Segoe UI", Arial, sans-serif';
+        ctx.fillStyle = template.colors[2];
+        ctx.fillText(`Member #${userNumber} • Added by ${adderName}`, width / 2, 480);
+        
+    } else if (layout === 1) {
+        // Layout 2: Side Design
+        // Left side - Group info
+        if (gcImage) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(150, height / 2, 80, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(gcImage, 70, height / 2 - 80, 160, 160);
+            ctx.restore();
+        }
+        
+        // Right side - User info
+        ctx.textAlign = 'left';
+        ctx.fillStyle = template.colors[0];
+        ctx.font = 'bold 20px "Segoe UI", Arial, sans-serif';
+        ctx.fillText('NEW MEMBER JOINED', 350, 180);
+        
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 48px "Segoe UI", Arial, sans-serif';
+        ctx.fillText(userName, 350, 250);
+        
+        ctx.fillStyle = template.colors[1];
+        ctx.font = '28px "Segoe UI", Arial, sans-serif';
+        ctx.fillText(threadName, 350, 310);
+        
+        // User image
+        if (userImage) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(850, 280, 60, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(userImage, 790, 220, 120, 120);
+            ctx.restore();
+        }
+        
+        // Info box at bottom
+        ctx.fillStyle = `${template.colors[2]}30`;
+        drawRoundRect(ctx, 50, height - 100, width - 100, 80, 15);
+        ctx.fill();
+        
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 28px "Segoe UI", Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(`#${userNumber}`, width / 3, height - 55);
+        ctx.fillText(adderName, width * 2/3, height - 55);
+        
+        ctx.font = '18px "Segoe UI", Arial, sans-serif';
+        ctx.fillStyle = '#94a3b8';
+        ctx.fillText('MEMBER', width / 3, height - 85);
+        ctx.fillText('ADDED BY', width * 2/3, height - 85);
+        
+    } else {
+        // Layout 3: Card Design
+        // Main card
+        ctx.fillStyle = '#1e293b80';
+        drawRoundRect(ctx, 80, 80, width - 160, height - 160, 25);
+        ctx.fill();
+        
+        // Card border
+        ctx.strokeStyle = template.colors[0];
+        ctx.lineWidth = 3;
+        drawRoundRect(ctx, 80, 80, width - 160, height - 160, 25);
+        ctx.stroke();
+        
+        // Welcome badge
+        ctx.fillStyle = template.colors[1];
+        drawRoundRect(ctx, width / 2 - 100, 120, 200, 45, 22);
+        ctx.fill();
+        
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 24px "Segoe UI", Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('🎉 WELCOME 🎉', width / 2, 150);
+        
+        // User image
+        if (userImage) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(width / 2, 260, 70, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(userImage, width / 2 - 70, 190, 140, 140);
+            ctx.restore();
+        }
+        
+        // User name
+        drawTextWithEffects(ctx, userName, width / 2, 370, template.colors, 'glow');
+        
+        // Group name
+        ctx.fillStyle = '#cbd5e1';
+        ctx.font = '24px "Segoe UI", Arial, sans-serif';
+        ctx.fillText(`to ${threadName}`, width / 2, 420);
+        
+        // Info box
+        ctx.fillStyle = '#0f172a60';
+        drawRoundRect(ctx, 150, 470, width - 300, 70, 15);
+        ctx.fill();
+        
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '20px "Segoe UI", Arial, sans-serif';
+        ctx.fillText(`Member #${userNumber}`, width / 3, 510);
+        ctx.fillText(`Added by ${adderName}`, width * 2/3, 510);
     }
     
-    // Add template name watermark
-    ctx.fillStyle = '#ffffff20';
-    ctx.font = '14px "Segoe UI", Arial, sans-serif';
+    // Template name watermark
+    ctx.fillStyle = '#ffffff30';
+    ctx.font = '12px "Segoe UI", Arial, sans-serif';
     ctx.textAlign = 'right';
-    ctx.fillText(`Theme: ${template.name}`, width - 20, height - 20);
+    ctx.fillText(`Design: ${template.name}`, width - 15, height - 15);
     
-    return canvas.toBuffer('image/png');
-}
-
-// Add roundRect to CanvasRenderingContext2D
-if (!CanvasRenderingContext2D.prototype.roundRect) {
-    CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
-        if (w < 2 * r) r = w / 2;
-        if (h < 2 * r) r = h / 2;
-        this.beginPath();
-        this.moveTo(x + r, y);
-        this.arcTo(x + w, y, x + w, y + h, r);
-        this.arcTo(x + w, y + h, x, y + h, r);
-        this.arcTo(x, y + h, x, y, r);
-        this.arcTo(x, y, x + w, y, r);
-        this.closePath();
-        return this;
-    }
+    return canvas.toBuffer();
 }
 
 module.exports = {
@@ -577,27 +592,27 @@ module.exports = {
         category: "events"
     },
 
-    onStart: async ({ threadsData, event, message, usersData, api }) => {
+    onStart: async ({ threadsData, event, message, usersData }) => {
         const type = "log:subscribe";
         if (event.logMessageType !== type) return;
         
         try {
-            // Get all data in parallel for speed
+            // Get thread ID and user info
             const threadID = event.threadID;
             const addedUser = event.logMessageData.addedParticipants[0];
             const addedUserId = addedUser.userFbId;
             const adderId = event.author;
             
-            const [threadInfo, userAvatar, adderAvatar, userName, adderName] = await Promise.all([
+            // Fetch all data
+            const [threadInfo, userAvatar, adderAvatar, adderName] = await Promise.all([
                 threadsData.get(threadID),
                 usersData.getAvatarUrl(addedUserId),
                 usersData.getAvatarUrl(adderId),
-                Promise.resolve(addedUser.fullName),
                 usersData.getName(adderId)
             ]);
             
-            const groupImage = threadInfo.imageSrc || 
-                'https://i.imgur.com/7Qk8k6c.png'; // Default group image
+            const userName = addedUser.fullName;
+            const groupImage = threadInfo.imageSrc || 'https://i.imgur.com/7Qk8k6c.png';
             const threadName = threadInfo.threadName || "Group Chat";
             const memberCount = threadInfo.members?.length || 1;
             
@@ -612,30 +627,34 @@ module.exports = {
                 adderName
             );
             
-            // Send the image
-            const tempPath = path.join(__dirname, 'temp_welcome.png');
+            // Save temporary file
+            const tempDir = path.join(__dirname, '..', '..', 'temp');
+            await fs.ensureDir(tempDir);
+            const tempPath = path.join(tempDir, `welcome_${Date.now()}.png`);
+            
             fs.writeFileSync(tempPath, imageBuffer);
             
+            // Send message with image
             await message.reply({
-                body: `✨ Welcome ${userName} to ${threadName}! ✨\nYou're our ${memberCount}th member! 🎉`,
+                body: `✨ Welcome ${userName} to ${threadName}! ✨\nYou are member #${memberCount}! 🎉`,
                 attachment: fs.createReadStream(tempPath)
             });
             
-            // Cleanup
+            // Cleanup after 5 seconds
             setTimeout(() => {
                 if (fs.existsSync(tempPath)) {
                     fs.unlinkSync(tempPath);
                 }
-            }, 3000);
+            }, 5000);
             
         } catch (error) {
-            console.error('[WELCOME] Error:', error);
+            console.error('[WELCOME ERROR]:', error);
             
-            // Fallback simple welcome
+            // Simple fallback welcome
             const addedUser = event.logMessageData.addedParticipants[0];
             await message.send(
                 `🎉 Welcome ${addedUser.fullName} to the group! 🎉\n` +
-                `Hope you enjoy your stay here! 😊`
+                `We're excited to have you here! 😊`
             );
         }
     }
