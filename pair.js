@@ -333,7 +333,7 @@ module.exports = {
       
       ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
       ctx.font = "bold 22px 'Segoe UI', Arial, sans-serif";
-      ctx.fillText("MATCH", percentX, percentY + 80);
+      ctx.fillText("MATCH", percentX, percentY + 100);
       
       
       ctx.fillStyle = "#ffffff";
