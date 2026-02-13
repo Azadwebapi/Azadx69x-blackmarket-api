@@ -361,14 +361,14 @@ module.exports = {
           ctx.globalAlpha = 1;
 
           // ===== LEVEL BADGE - CENTERPIECE =====
-          const badgeX = canvasWidth / 2;
+          const centerX = canvasWidth / 2;
           const badgeY = 300;
           
           // Level glow
           ctx.shadowBlur = 50;
           ctx.shadowColor = "#ffff00";
           ctx.beginPath();
-          ctx.arc(badgeX, badgeY, 150, 0, Math.PI * 2);
+          ctx.arc(centerX, badgeY, 150, 0, Math.PI * 2);
           ctx.fillStyle = "rgba(255,255,0,0.1)";
           ctx.fill();
           
@@ -376,7 +376,7 @@ module.exports = {
           ctx.shadowBlur = 30;
           ctx.shadowColor = "#ffd700";
           ctx.beginPath();
-          ctx.arc(badgeX, badgeY, 130, 0, Math.PI * 2);
+          ctx.arc(centerX, badgeY, 130, 0, Math.PI * 2);
           ctx.fillStyle = "rgba(0,0,0,0.7)";
           ctx.fill();
           
@@ -386,13 +386,13 @@ module.exports = {
           ctx.font = "bold 120px 'Arial Black'";
           ctx.fillStyle = "#ffff00";
           ctx.textAlign = "center";
-          ctx.fillText(level, badgeX, badgeY + 40);
+          ctx.fillText(level, centerX, badgeY + 40);
           
           // Level text
           ctx.shadowBlur = 20;
           ctx.font = "30px Arial";
           ctx.fillStyle = "#ffffff";
-          ctx.fillText("LEVEL", badgeX, badgeY - 60);
+          ctx.fillText("LEVEL", centerX, badgeY - 60);
 
           // ===== AVATAR WITH CRYSTAL FRAME =====
           ctx.shadowBlur = 30;
@@ -526,22 +526,22 @@ module.exports = {
             { emoji: "⭐", text: `${Math.floor(level * 1.5)} PTS`, color: "#ffff00" }
           ];
 
-          let badgeStartX = 250;
+          let badgeStartPosition = 250;
           badges.forEach(badge => {
             ctx.shadowBlur = 15;
             ctx.shadowColor = badge.color;
             ctx.fillStyle = "rgba(0,0,0,0.5)";
-            ctx.fillRect(badgeStartX, 1230, 150, 50);
+            ctx.fillRect(badgeStartPosition, 1230, 150, 50);
             
             ctx.strokeStyle = badge.color;
             ctx.lineWidth = 2;
-            ctx.strokeRect(badgeStartX, 1230, 150, 50);
+            ctx.strokeRect(badgeStartPosition, 1230, 150, 50);
             
             ctx.font = "25px Arial";
             ctx.fillStyle = badge.color;
-            ctx.fillText(`${badge.emoji} ${badge.text}`, badgeStartX + 25, 1265);
+            ctx.fillText(`${badge.emoji} ${badge.text}`, badgeStartPosition + 25, 1265);
             
-            badgeStartX += 180;
+            badgeStartPosition += 180;
           });
 
           // ===== FOOTER =====
