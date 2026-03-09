@@ -5,34 +5,37 @@ const { createCanvas } = require("canvas");
 module.exports = {
     config: {
         name: "bank",
-        version: "2.0-premium",
+        version: "4.0-atm-canvas",
         author: "Azadx69x",
         role: 0,
-        shortDescription: "𝐁𝐚𝐧𝐤𝐢𝐧𝐠 𝐒𝐲𝐬𝐭𝐞𝐦 𝐰𝐢𝐭𝐡 𝐀𝐓𝐌",
-        longDescription: "𝐅𝐮𝐥𝐥 𝐛𝐚𝐧𝐤𝐢𝐧𝐠 𝐰𝐢𝐭𝐡 𝐀𝐓𝐌 𝐜𝐚𝐫𝐝 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐨𝐫, 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞, 𝐦𝐮𝐥𝐭𝐢𝐩𝐥𝐞 𝐝𝐞𝐬𝐢𝐠𝐧𝐬 𝐰𝐢𝐭𝐡 𝐩𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐥𝐚𝐲𝐨𝐮𝐭.",
+        shortDescription: "𝐀𝐓𝐌 𝐒𝐭𝐲𝐥𝐞 𝐁𝐚𝐧𝐤𝐢𝐧𝐠",
+        longDescription: "𝐂𝐨𝐦𝐩𝐥𝐞𝐭𝐞 𝐀𝐓𝐌-𝐬𝐭𝐲𝐥𝐞 𝐛𝐚𝐧𝐤𝐢𝐧𝐠 𝐰𝐢𝐭𝐡 𝐜𝐚𝐧𝐯𝐚𝐬 𝐢𝐧𝐭𝐞𝐫𝐟𝐚𝐜𝐞",
         category: "finance",
-        guide: `{𝐩𝐧} - 𝐕𝐢𝐞𝐰 𝐛𝐚𝐧𝐤 𝐦𝐞𝐧𝐮
-{𝐩𝐧} 𝐫𝐞𝐠𝐢𝐬𝐭𝐞𝐫 - 𝐑𝐞𝐠𝐢𝐬𝐭𝐞𝐫 𝐚𝐜𝐜𝐨𝐮𝐧𝐭
-{𝐩𝐧} 𝐛𝐚𝐥𝐚𝐧𝐜𝐞 - 𝐂𝐡𝐞𝐜𝐤 𝐛𝐚𝐥𝐚𝐧𝐜𝐞  
-{𝐩𝐧} 𝐝𝐞𝐩𝐨𝐬𝐢𝐭 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐃𝐞𝐩𝐨𝐬𝐢𝐭 𝐦𝐨𝐧𝐞𝐲
-{𝐩𝐧} 𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐖𝐢𝐭𝐡𝐝𝐫𝐚𝐰 𝐦𝐨𝐧𝐞𝐲
-{𝐩𝐧} 𝐡𝐢𝐬𝐭𝐨𝐫𝐲 - 𝐓𝐫𝐚𝐧𝐬𝐚𝐜𝐭𝐢𝐨𝐧 𝐡𝐢𝐬𝐭𝐨𝐫𝐲
-{𝐩𝐧} 𝐜𝐚𝐫𝐝 - 𝐕𝐢𝐞𝐰 𝐀𝐓𝐌 𝐜𝐚𝐫𝐝
-{𝐩𝐧} 𝐚𝐭𝐦𝐜𝐨𝐝𝐞 - 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞/𝐕𝐢𝐞𝐰 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞
-{𝐩𝐧} 𝐚𝐭𝐦𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 <𝐜𝐨𝐝𝐞> <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐖𝐢𝐭𝐡𝐝𝐫𝐚𝐰 𝐮𝐬𝐢𝐧𝐠 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞
-{𝐩𝐧} 𝐬𝐞𝐧𝐝 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐒𝐞𝐧𝐝 𝐦𝐨𝐧𝐞𝐲
-{𝐩𝐧} 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 - 𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧`
+        guide: `{𝐩𝐧} - 𝐀𝐓𝐌 𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮
+{𝐩𝐧} 𝐫𝐞𝐠𝐢𝐬𝐭𝐞𝐫 - 𝐎𝐩𝐞𝐧 𝐀𝐓𝐌 𝐚𝐜𝐜𝐨𝐮𝐧𝐭
+{𝐩𝐧} 𝐛𝐚𝐥𝐚𝐧𝐜𝐞 - 𝐂𝐡𝐞𝐜𝐤 𝐛𝐚𝐥𝐚𝐧𝐜𝐞
+{𝐩𝐧} 𝐝𝐞𝐩𝐨𝐬𝐢𝐭 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐀𝐝𝐝 𝐦𝐨𝐧𝐞𝐲
+{𝐩𝐧} 𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐓𝐚𝐤𝐞 𝐦𝐨𝐧𝐞𝐲
+{𝐩𝐧} 𝐬𝐞𝐧𝐝 <@𝐮𝐬𝐞𝐫> <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐒𝐞𝐧𝐝 𝐦𝐨𝐧𝐞𝐲
+{𝐩𝐧} 𝐜𝐚𝐫𝐝 - 𝐀𝐓𝐌 𝐂𝐚𝐫𝐝 𝐕𝐢𝐞𝐰
+{𝐩𝐧} 𝐚𝐭𝐦𝐜𝐨𝐝𝐞 - 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐀𝐓𝐌 𝐂𝐨𝐝𝐞
+{𝐩𝐧} 𝐚𝐭𝐦𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 <𝐜𝐨𝐝𝐞> <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐔𝐬𝐞 𝐀𝐓𝐌 𝐂𝐨𝐝𝐞
+{𝐩𝐧} 𝐡𝐢𝐬𝐭𝐨𝐫𝐲 - 𝐓𝐫𝐚𝐧𝐬𝐚𝐜𝐭𝐢𝐨𝐧 𝐇𝐢𝐬𝐭𝐨𝐫𝐲
+{𝐩𝐧} 𝐥𝐨𝐚𝐧 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐀𝐩𝐩𝐥𝐲 𝐋𝐨𝐚𝐧
+{𝐩𝐧} 𝐫𝐞𝐩𝐚𝐲 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐑𝐞𝐩𝐚𝐲 𝐋𝐨𝐚𝐧
+{𝐩𝐧} 𝐟𝐝 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐅𝐢𝐱𝐞𝐝 𝐃𝐞𝐩𝐨𝐬𝐢𝐭`
     },
-  
+
+    // Helper Functions
     formatMoney(amount) {
-        if (isNaN(amount)) return "𝟎";
+        if (isNaN(amount)) return "0";
         amount = Number(amount);
         const scales = [
-            { value: 1e15, suffix: '𝐐' },
-            { value: 1e12, suffix: '𝐓' },
-            { value: 1e9, suffix: '𝐁' },
-            { value: 1e6, suffix: '𝐌' },
-            { value: 1e3, suffix: '𝐤' }
+            { value: 1e15, suffix: 'Q' },
+            { value: 1e12, suffix: 'T' },
+            { value: 1e9, suffix: 'B' },
+            { value: 1e6, suffix: 'M' },
+            { value: 1e3, suffix: 'K' }
         ];
         for (let scale of scales) {
             if (amount >= scale.value) {
@@ -44,7 +47,7 @@ module.exports = {
     },
 
     generateCardNumber() {
-        return "𝟓𝟐𝟖𝟒 " +
+        return "5284 " +
             Math.floor(1000 + Math.random() * 9000) + " " +
             Math.floor(1000 + Math.random() * 9000) + " " +
             Math.floor(1000 + Math.random() * 9000);
@@ -62,6 +65,10 @@ module.exports = {
         return code;
     },
 
+    generateAccountNumber() {
+        return `GB${Math.floor(10000000 + Math.random() * 90000000)}${Math.floor(1000 + Math.random() * 9000)}`;
+    },
+
     getExpiry() {
         const now = new Date();
         return `${now.getMonth() + 1}/${(now.getFullYear() + 4).toString().slice(-2)}`;
@@ -71,142 +78,538 @@ module.exports = {
         return new Date().toISOString();
     },
 
-    cardDesigns: {
-        default: {
-            gradient: ["#0a0f24", "#16233f", "#1c2b4a"],
-            chipColor: "#d4c28f",
-            hologramColors: ["#d97c30", "#d9b130"],
-        },
-        ocean: {
-            gradient: ["#004e92", "#000428", "#002f4b"],
-            chipColor: "#b5c99a",
-            hologramColors: ["#1ca3ec", "#50c9ce"],
-        },
-        sunset: {
-            gradient: ["#ff512f", "#f09819", "#ff7e5f"],
-            chipColor: "#ffd700",
-            hologramColors: ["#ff4500", "#ff6347"],
-        }
+    calculateLoanInterest(amount, days) {
+        const rate = 0.12;
+        return Math.floor(amount * rate * (days / 365));
     },
-  
-    async createRealCard(card, username, balance, transactions = [], design = "default") {
-        const width = 900, height = 540;
+
+    calculateFDInterest(amount, days) {
+        const rate = 0.05;
+        return Math.floor(amount * rate * (days / 365));
+    },
+
+    // Canvas ATM Interface
+    async createATMScreen(title, content, userData = null, options = {}) {
+        const width = 800, height = 1000;
         const canvas = createCanvas(width, height);
         const ctx = canvas.getContext("2d");
-        const d = this.cardDesigns[design] || this.cardDesigns.default;
-      
-        const bg = ctx.createLinearGradient(0, 0, width, height);
-        bg.addColorStop(0, d.gradient[0]);
-        bg.addColorStop(0.5, d.gradient[1]);
-        bg.addColorStop(1, d.gradient[2]);
-        ctx.fillStyle = bg;
-        ctx.fillRect(0, 0, width, height);
-      
-        ctx.font = "48px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText("𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐁𝐚𝐧𝐤 𝐖𝐚𝐥𝐥𝐞𝐭", 40, 80);
-      
-        ctx.fillStyle = d.chipColor;
-        ctx.fillRect(40, 160, 120, 80);
-        ctx.strokeStyle = "#8d7d47";
-        ctx.lineWidth = 3;
-        ctx.strokeRect(40, 160, 120, 80);
 
-        ctx.strokeStyle = "#b6a46b";
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(40, 190); ctx.lineTo(160, 190);
-        ctx.moveTo(40, 210); ctx.lineTo(160, 210);
-        ctx.stroke();
-      
-        ctx.font = "42px monospace";
-        ctx.fillStyle = "white";
-        ctx.shadowColor = "rgba(0,0,0,0.6)";
-        ctx.shadowBlur = 10;
-        ctx.fillText(card.number, 40, 340);
-        ctx.shadowBlur = 0;
-      
-        ctx.font = "36px sans-serif";
-        ctx.fillStyle = "#eeeeee";
-        ctx.fillText(username.toUpperCase(), 40, 430);
-      
-        ctx.font = "28px sans-serif";
-        ctx.fillStyle = "#bbbbbb";
-        ctx.fillText("𝐕𝐀𝐋𝐈𝐃 𝐓𝐇𝐑𝐔", 600, 300);
-        ctx.font = "44px monospace";
-        ctx.fillStyle = "white";
-        ctx.fillText(card.expiry, 600, 350);
-      
-        ctx.font = "26px sans-serif";
-        ctx.fillStyle = "#dddddd";
-        ctx.fillText("𝐂𝐕𝐕: *** (𝐇𝐢𝐝𝐝𝐞𝐧)", 600, 430);
-      
-        ctx.font = "34px sans-serif";
-        ctx.fillStyle = "#ffffff";
-        ctx.textAlign = "right";
-        ctx.fillText(`𝐁𝐚𝐥𝐚𝐧𝐜𝐞: ${this.formatMoney(balance)} 𝐁𝐃𝐓`, 860, 470);
-      
-        if (transactions.length) {
-            const lastTx = transactions[transactions.length - 1];
-            const typeSymbol = lastTx.type === "sent" ? "➡️" : "⬅️";
-            const amountText = `${this.formatMoney(lastTx.amount)} 𝐁𝐃𝐓`;
-            const info = `${typeSymbol} ${amountText} ${lastTx.type === "sent" ? "𝐒𝐞𝐧𝐭" : "𝐑𝐞𝐜𝐞𝐢𝐯𝐞𝐝"}`;
-            ctx.font = "26px sans-serif";
-            ctx.fillStyle = "#ffd700";
-            ctx.textAlign = "left";
-            ctx.fillText(info, 40, 470);
+        // ATM Background
+        const gradient = ctx.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, "#1a237e");
+        gradient.addColorStop(0.5, "#0d47a1");
+        gradient.addColorStop(1, "#01579b");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        // ATM Border
+        ctx.strokeStyle = "#ffd700";
+        ctx.lineWidth = 10;
+        ctx.strokeRect(20, 20, width - 40, height - 40);
+
+        // ATM Header
+        ctx.fillStyle = "#ffd700";
+        ctx.font = "bold 48px 'Courier New'";
+        ctx.textAlign = "center";
+        ctx.fillText("🏧 ATM BANKING 🏧", width/2, 100);
+
+        // Screen Display
+        ctx.fillStyle = "#87CEEB";
+        ctx.fillRect(60, 150, width - 120, 200);
+        
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 3;
+        ctx.strokeRect(60, 150, width - 120, 200);
+
+        // Screen Content
+        ctx.fillStyle = "#000";
+        ctx.font = "bold 32px 'Arial'";
+        ctx.fillText(title, width/2, 220);
+
+        ctx.font = "28px 'Arial'";
+        ctx.fillStyle = "#333";
+        ctx.fillText(content, width/2, 280);
+
+        // User Info Panel
+        if (userData) {
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(60, 380, width - 120, 100);
+            ctx.strokeStyle = "#ffd700";
+            ctx.lineWidth = 2;
+            ctx.strokeRect(60, 380, width - 120, 100);
+
+            ctx.fillStyle = "#000";
+            ctx.font = "24px 'Arial'";
+            ctx.fillText(`👤 ${userData.name || 'User'}`, 100, 430);
+            ctx.fillText(`💰 Balance: ${this.formatMoney(userData.balance)} BDT`, 100, 470);
         }
-      
-        ctx.globalAlpha = 0.85;
-        ctx.fillStyle = d.hologramColors[0];
-        ctx.beginPath(); ctx.arc(750, 140, 35, 0, Math.PI*2); ctx.fill();
-        ctx.fillStyle = d.hologramColors[1];
-        ctx.beginPath(); ctx.arc(790, 140, 35, 0, Math.PI*2); ctx.fill();
-        ctx.globalAlpha = 1;
-      
+
+        // Keypad Area
+        ctx.fillStyle = "#333";
+        ctx.fillRect(100, 520, 200, 400);
+        
+        // Keypad Buttons
+        const keys = [
+            ['1', '2', '3'],
+            ['4', '5', '6'],
+            ['7', '8', '9'],
+            ['*', '0', '#']
+        ];
+
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 3; j++) {
+                const x = 120 + (j * 70);
+                const y = 540 + (i * 80);
+                
+                ctx.fillStyle = "#555";
+                ctx.beginPath();
+                ctx.arc(x + 25, y + 25, 25, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.fillStyle = "#fff";
+                ctx.font = "bold 28px 'Arial'";
+                ctx.textAlign = "center";
+                ctx.fillText(keys[i][j], x + 25, y + 35);
+            }
+        }
+
+        // Function Buttons
+        const functions = options.buttons || ['CANCEL', 'CLEAR', 'ENTER'];
+        for (let i = 0; i < functions.length; i++) {
+            const y = 540 + (i * 80);
+            
+            ctx.fillStyle = "#ffd700";
+            ctx.fillRect(500, y, 200, 50);
+            
+            ctx.fillStyle = "#000";
+            ctx.font = "bold 20px 'Arial'";
+            ctx.fillText(functions[i], 600, y + 35);
+        }
+
+        // Footer
+        ctx.fillStyle = "#fff";
+        ctx.font = "18px 'Arial'";
+        ctx.fillText("Thank you for using ATM Service", width/2, 950);
+        ctx.fillText(new Date().toLocaleString(), width/2, 980);
+
         const outputDir = path.join(__dirname, "cache");
         fs.mkdirSync(outputDir, { recursive: true });
-        const filePath = path.join(outputDir, `${Date.now()}_card.png`);
+        const filePath = path.join(outputDir, `atm_${Date.now()}.png`);
         fs.writeFileSync(filePath, canvas.toBuffer());
         return filePath;
     },
-  
-    async onStart({ message, args, usersData, event }) {
+
+    async createBalanceCard(userData) {
+        const width = 800, height = 600;
+        const canvas = createCanvas(width, height);
+        const ctx = canvas.getContext("2d");
+
+        // Background
+        const gradient = ctx.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, "#2c3e50");
+        gradient.addColorStop(1, "#3498db");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        // Balance Card Design
+        ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
+        ctx.fillRect(50, 50, width - 100, height - 100);
+
+        // Header
+        ctx.fillStyle = "#fff";
+        ctx.font = "bold 40px 'Arial'";
+        ctx.textAlign = "center";
+        ctx.fillText("💰 ACCOUNT BALANCE 💰", width/2, 150);
+
+        // Balance Display
+        ctx.font = "bold 60px 'Courier New'";
+        ctx.fillStyle = "#ffd700";
+        ctx.fillText(`${this.formatMoney(userData.balance)} BDT`, width/2, 280);
+
+        // Account Details
+        ctx.font = "24px 'Arial'";
+        ctx.fillStyle = "#fff";
+        ctx.fillText(`Account: ${userData.accountNumber}`, width/2, 380);
+        ctx.fillText(`Type: ${userData.accountType || 'Standard'}`, width/2, 430);
+        ctx.fillText(`Credit Score: ${userData.creditScore || '700'}`, width/2, 480);
+
+        // Footer
+        ctx.font = "20px 'Arial'";
+        ctx.fillStyle = "#ecf0f1";
+        ctx.fillText(new Date().toLocaleString(), width/2, 550);
+
+        const outputDir = path.join(__dirname, "cache");
+        fs.mkdirSync(outputDir, { recursive: true });
+        const filePath = path.join(outputDir, `balance_${Date.now()}.png`);
+        fs.writeFileSync(filePath, canvas.toBuffer());
+        return filePath;
+    },
+
+    async createTransactionHistory(transactions, userData) {
+        const width = 800, height = 1000;
+        const canvas = createCanvas(width, height);
+        const ctx = canvas.getContext("2d");
+
+        // Background
+        ctx.fillStyle = "#2c3e50";
+        ctx.fillRect(0, 0, width, height);
+
+        // Receipt Paper Effect
+        ctx.fillStyle = "#ecf0f1";
+        ctx.fillRect(40, 40, width - 80, height - 80);
+
+        // Header
+        ctx.fillStyle = "#000";
+        ctx.font = "bold 36px 'Courier New'";
+        ctx.textAlign = "center";
+        ctx.fillText("📋 ATM TRANSACTION SLIP 📋", width/2, 100);
+
+        // Account Info
+        ctx.font = "24px 'Courier New'";
+        ctx.fillText(`Account: ${userData.accountNumber}`, width/2, 160);
+        ctx.fillText(`Balance: ${this.formatMoney(userData.balance)} BDT`, width/2, 210);
+
+        // Transactions
+        ctx.font = "20px 'Courier New'";
+        let y = 280;
+        
+        if (!transactions || transactions.length === 0) {
+            ctx.fillText("No transactions yet", width/2, y);
+        } else {
+            transactions.slice(-8).reverse().forEach((tx, i) => {
+                const date = new Date(tx.time).toLocaleString();
+                const symbol = tx.type === 'received' ? '📥' : '📤';
+                const amount = tx.type === 'received' ? `+${tx.amount}` : `-${tx.amount}`;
+                
+                ctx.fillText(`${symbol} ${this.formatMoney(amount)} BDT`, width/2, y);
+                ctx.font = "16px 'Courier New'";
+                ctx.fillText(`${date}`, width/2, y + 30);
+                ctx.fillText(`${tx.type === 'received' ? 'From' : 'To'}: ${tx.from || tx.to}`, width/2, y + 60);
+                ctx.font = "20px 'Courier New'";
+                y += 100;
+            });
+        }
+
+        // Footer
+        ctx.font = "18px 'Courier New'";
+        ctx.fillText("══════════════════════════", width/2, 900);
+        ctx.fillText("Thank you for banking with us", width/2, 950);
+
+        const outputDir = path.join(__dirname, "cache");
+        fs.mkdirSync(outputDir, { recursive: true });
+        const filePath = path.join(outputDir, `history_${Date.now()}.png`);
+        fs.writeFileSync(filePath, canvas.toBuffer());
+        return filePath;
+    },
+
+    async createATMCodeCard(code, userData) {
+        const width = 600, height = 400;
+        const canvas = createCanvas(width, height);
+        const ctx = canvas.getContext("2d");
+
+        // ATM Receipt Style
+        ctx.fillStyle = "#fff8e7";
+        ctx.fillRect(0, 0, width, height);
+
+        // Border
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(10, 10, width - 20, height - 20);
+
+        // Header
+        ctx.fillStyle = "#000";
+        ctx.font = "bold 30px 'Courier New'";
+        ctx.textAlign = "center";
+        ctx.fillText("🏧 ATM CODE SLIP 🏧", width/2, 60);
+
+        // Code Display
+        ctx.font = "bold 48px 'Courier New'";
+        ctx.fillStyle = "#d32f2f";
+        ctx.fillText(code, width/2, 160);
+
+        // Details
+        ctx.font = "20px 'Courier New'";
+        ctx.fillStyle = "#000";
+        ctx.fillText(`Amount: ${this.formatMoney(userData.balance)} BDT`, width/2, 240);
+        ctx.fillText(`Expires: ${new Date(Date.now() + 86400000).toLocaleString()}`, width/2, 290);
+        ctx.fillText(`Valid for 24 hours only`, width/2, 340);
+
+        // Footer
+        ctx.font = "16px 'Courier New'";
+        ctx.fillText("Keep this code secure", width/2, 380);
+
+        const outputDir = path.join(__dirname, "cache");
+        fs.mkdirSync(outputDir, { recursive: true });
+        const filePath = path.join(outputDir, `atmcode_${Date.now()}.png`);
+        fs.writeFileSync(filePath, canvas.toBuffer());
+        return filePath;
+    },
+
+    async createLoanCard(loanData, userData) {
+        const width = 700, height = 500;
+        const canvas = createCanvas(width, height);
+        const ctx = canvas.getContext("2d");
+
+        // Professional Loan Card
+        const gradient = ctx.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, "#1a2980");
+        gradient.addColorStop(1, "#26d0ce");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        // White Panel
+        ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
+        ctx.fillRect(30, 30, width - 60, height - 60);
+
+        // Loan Title
+        ctx.fillStyle = "#000";
+        ctx.font = "bold 40px 'Arial'";
+        ctx.textAlign = "center";
+        ctx.fillText("💰 LOAN APPROVED 💰", width/2, 100);
+
+        // Loan Amount
+        ctx.font = "bold 50px 'Courier New'";
+        ctx.fillStyle = "#27ae60";
+        ctx.fillText(`${this.formatMoney(loanData.amount)} BDT`, width/2, 200);
+
+        // Details
+        ctx.font = "24px 'Arial'";
+        ctx.fillStyle = "#000";
+        ctx.fillText(`Interest: ${this.formatMoney(loanData.interest)} BDT`, width/2, 280);
+        ctx.fillText(`Due Date: ${new Date(loanData.dueDate).toLocaleDateString()}`, width/2, 330);
+        ctx.fillText(`Credit Score: ${userData.creditScore || '700'}`, width/2, 380);
+
+        // Footer
+        ctx.font = "18px 'Arial'";
+        ctx.fillStyle = "#7f8c8d";
+        ctx.fillText("Repay before due date to avoid penalty", width/2, 450);
+
+        const outputDir = path.join(__dirname, "cache");
+        fs.mkdirSync(outputDir, { recursive: true });
+        const filePath = path.join(outputDir, `loan_${Date.now()}.png`);
+        fs.writeFileSync(filePath, canvas.toBuffer());
+        return filePath;
+    },
+
+    async createFDCard(fdData, userData) {
+        const width = 700, height = 500;
+        const canvas = createCanvas(width, height);
+        const ctx = canvas.getContext("2d");
+
+        // Gold Theme
+        const gradient = ctx.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, "#bf9530");
+        gradient.addColorStop(0.5, "#fcf6ba");
+        gradient.addColorStop(1, "#b38728");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        // FD Certificate
+        ctx.fillStyle = "rgba(255, 255, 255, 0.95)";
+        ctx.fillRect(20, 20, width - 40, height - 40);
+
+        ctx.fillStyle = "#000";
+        ctx.font = "bold 36px 'Times New Roman'";
+        ctx.textAlign = "center";
+        ctx.fillText("📜 FIXED DEPOSIT CERTIFICATE 📜", width/2, 80);
+
+        ctx.font = "bold 48px 'Courier New'";
+        ctx.fillStyle = "#8B4513";
+        ctx.fillText(`${this.formatMoney(fdData.amount)} BDT`, width/2, 170);
+
+        ctx.font = "24px 'Arial'";
+        ctx.fillStyle = "#000";
+        ctx.fillText(`Interest Earned: ${this.formatMoney(fdData.interest)} BDT`, width/2, 250);
+        ctx.fillText(`Maturity Date: ${new Date(fdData.maturityDate).toLocaleDateString()}`, width/2, 310);
+        ctx.fillText(`Maturity Amount: ${this.formatMoney(fdData.amount + fdData.interest)} BDT`, width/2, 370);
+
+        ctx.font = "20px 'Arial'";
+        ctx.fillStyle = "#4a4a4a";
+        ctx.fillText(`Account: ${userData.accountNumber}`, width/2, 430);
+
+        const outputDir = path.join(__dirname, "cache");
+        fs.mkdirSync(outputDir, { recursive: true });
+        const filePath = path.join(outputDir, `fd_${Date.now()}.png`);
+        fs.writeFileSync(filePath, canvas.toBuffer());
+        return filePath;
+    },
+
+    async createMainMenu(userData) {
+        const width = 800, height = 1000;
+        const canvas = createCanvas(width, height);
+        const ctx = canvas.getContext("2d");
+
+        // ATM Main Menu Background
+        const gradient = ctx.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, "#283048");
+        gradient.addColorStop(1, "#859398");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        // ATM Screen
+        ctx.fillStyle = "#2c3e50";
+        ctx.fillRect(40, 40, width - 80, height - 80);
+        
+        ctx.strokeStyle = "#ffd700";
+        ctx.lineWidth = 5;
+        ctx.strokeRect(40, 40, width - 80, height - 80);
+
+        // ATM Header
+        ctx.fillStyle = "#ffd700";
+        ctx.font = "bold 48px 'Courier New'";
+        ctx.textAlign = "center";
+        ctx.fillText("🏧 ATM MAIN MENU 🏧", width/2, 120);
+
+        // User Info
+        ctx.fillStyle = "#ecf0f1";
+        ctx.font = "24px 'Arial'";
+        ctx.fillText(`Welcome, ${userData.name || 'User'}`, width/2, 190);
+        ctx.fillText(`Account: ${userData.accountNumber}`, width/2, 230);
+        ctx.fillText(`Balance: ${this.formatMoney(userData.balance)} BDT`, width/2, 270);
+
+        // Menu Options
+        const menuOptions = [
+            "1. CHECK BALANCE",
+            "2. DEPOSIT CASH",
+            "3. WITHDRAW CASH",
+            "4. SEND MONEY",
+            "5. VIEW ATM CARD",
+            "6. GENERATE ATM CODE",
+            "7. TRANSACTION HISTORY",
+            "8. APPLY FOR LOAN",
+            "9. FIXED DEPOSIT",
+            "0. EXIT"
+        ];
+
+        ctx.font = "28px 'Courier New'";
+        ctx.fillStyle = "#3498db";
+        let y = 350;
+        menuOptions.forEach(option => {
+            ctx.fillStyle = "#3498db";
+            ctx.fillText(option, width/2 - 200, y);
+            y += 45;
+        });
+
+        // Instructions
+        ctx.font = "20px 'Arial'";
+        ctx.fillStyle = "#f1c40f";
+        ctx.fillText("Please select an option or type command", width/2, 850);
+        ctx.fillText("Example: bank balance, bank deposit 1000", width/2, 890);
+
+        // Footer
+        ctx.font = "18px 'Arial'";
+        ctx.fillStyle = "#bdc3c7";
+        ctx.fillText(new Date().toLocaleString(), width/2, 950);
+
+        const outputDir = path.join(__dirname, "cache");
+        fs.mkdirSync(outputDir, { recursive: true });
+        const filePath = path.join(outputDir, `mainmenu_${Date.now()}.png`);
+        fs.writeFileSync(filePath, canvas.toBuffer());
+        return filePath;
+    },
+
+    async onStart({ message, args, usersData, event, api }) {
         const uid = event.senderID;
         const action = args[0]?.toLowerCase();
         let data = await usersData.get(uid);
+        
+        // Initialize bank data
         if (!data.data) data.data = {};
-        if (!data.data.bank)
+        if (!data.data.bank) {
             data.data.bank = {
                 balance: 0,
                 registered: false,
                 card: null,
                 transactions: [],
-                accountNumber: `𝐆𝐁${Math.floor(1000000000000 + Math.random() * 9000000000000)}`,
+                accountNumber: this.generateAccountNumber(),
                 createdAt: null,
-                savings: 0,
-                atmCodes: []
+                atmCodes: [],
+                loan: { amount: 0 },
+                fixedDeposits: [],
+                creditScore: 700,
+                accountType: "Standard"
             };
+        }
+        
         const bank = data.data.bank;
-      
-        if (action === "register") {
-            if (bank.registered) return message.reply("⚠️ 𝐘𝐨𝐮 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 𝐡𝐚𝐯𝐞 𝐚 𝐛𝐚𝐧𝐤 𝐚𝐜𝐜𝐨𝐮𝐧𝐭.");
-            bank.registered = true;
-            bank.balance = 0;
-            bank.createdAt = this.nowISO();
-            await usersData.set(uid, { data: data.data });
 
-            return message.reply(
-`✅ 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐓𝐈𝐎𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋!
-🏦 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐃𝐢𝐠𝐢𝐭𝐚𝐥 𝐁𝐚𝐧𝐤
-📈 𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐍𝐨: ${bank.accountNumber}
-📅 𝐎𝐩𝐞𝐧𝐞𝐝: ${bank.createdAt}`
-            );
+        // Show ATM Main Menu if no action
+        if (!action) {
+            const menuImage = await this.createMainMenu({
+                name: data.name || "User",
+                accountNumber: bank.accountNumber,
+                balance: bank.balance
+            });
+            
+            return message.reply({
+                body: "🏧 **ATM Banking System** 🏧\nPlease select an option:",
+                attachment: fs.createReadStream(menuImage)
+            });
         }
 
-        if (!bank.registered)
-            return message.reply("❌ 𝐘𝐨𝐮 𝐝𝐨𝐧'𝐭 𝐡𝐚𝐯𝐞 𝐚 𝐛𝐚𝐧𝐤 𝐚𝐜𝐜𝐨𝐮𝐧𝐭.\n𝐔𝐬𝐞: \`𝐛𝐚𝐧𝐤 𝐫𝐞𝐠𝐢𝐬𝐭𝐞𝐫\`");
-      
+        // Register Command
+        if (action === "register") {
+            if (bank.registered) {
+                const errorImage = await this.createATMScreen(
+                    "ERROR",
+                    "Account already exists!",
+                    null,
+                    { buttons: ['OK'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            bank.registered = true;
+            bank.balance = 1000;
+            bank.createdAt = this.nowISO();
+            bank.transactions.push({
+                type: "received",
+                amount: 1000,
+                from: "Welcome Bonus",
+                time: Date.now()
+            });
+            
+            await usersData.set(uid, { data: data.data });
+
+            const successImage = await this.createATMScreen(
+                "ACCOUNT CREATED",
+                `Welcome Bonus: 1,000 BDT`,
+                { name: data.name, balance: bank.balance },
+                { buttons: ['PRINT RECEIPT', 'CONTINUE'] }
+            );
+            
+            return message.reply({
+                body: `✅ Account opened successfully!\nAccount Number: ${bank.accountNumber}`,
+                attachment: fs.createReadStream(successImage)
+            });
+        }
+
+        if (!bank.registered) {
+            const errorImage = await this.createATMScreen(
+                "ACCESS DENIED",
+                "Please register first",
+                null,
+                { buttons: ['REGISTER NOW'] }
+            );
+            return message.reply({ attachment: fs.createReadStream(errorImage) });
+        }
+
+        // Balance Command
+        if (action === "balance") {
+            const balanceImage = await this.createBalanceCard({
+                balance: bank.balance,
+                accountNumber: bank.accountNumber,
+                accountType: bank.accountType,
+                creditScore: bank.creditScore
+            });
+            
+            return message.reply({
+                body: "💰 **Current Balance** 💰",
+                attachment: fs.createReadStream(balanceImage)
+            });
+        }
+
+        // ATM Code Generation
         if (action === "atmcode") {
             const newCode = this.generateATMCode();
             const expiryTime = Date.now() + (24 * 60 * 60 * 1000);
@@ -221,29 +624,33 @@ module.exports = {
             });
             
             await usersData.set(uid, { data: data.data });
+
+            const codeImage = await this.createATMCodeCard(newCode, {
+                balance: bank.balance
+            });
             
-            return message.reply(
-`🏧 𝐀𝐓𝐌 𝐂𝐎𝐃𝐄 𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐄𝐃
-━━━━━━━━━━━━━━━━━━━
-🔐 𝐘𝐨𝐮𝐫 𝐀𝐓𝐌 𝐂𝐨𝐝𝐞: \`${newCode}\`
-⏰ 𝐄𝐱𝐩𝐢𝐫𝐞𝐬: ${new Date(expiryTime).toLocaleString()}
-💰 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐁𝐚𝐥𝐚𝐧𝐜𝐞: ${this.formatMoney(bank.balance)} 𝐁𝐃𝐓
-
-📌 𝐇𝐨𝐰 𝐭𝐨 𝐮𝐬𝐞:
-𝐒𝐞𝐧𝐝 𝐭𝐡𝐢𝐬 𝐜𝐨𝐝𝐞 𝐭𝐨 𝐬𝐨𝐦𝐞𝐨𝐧𝐞 𝐨𝐫 𝐮𝐬𝐞 𝐢𝐭 𝐲𝐨𝐮𝐫𝐬𝐞𝐥𝐟 𝐰𝐢𝐭𝐡:
-\`𝐛𝐚𝐧𝐤 𝐚𝐭𝐦𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 ${newCode} <𝐚𝐦𝐨𝐮𝐧𝐭>\`
-
-⚠️ 𝐂𝐨𝐝𝐞 𝐞𝐱𝐩𝐢𝐫𝐞𝐬 𝐢𝐧 𝟐𝟒 𝐡𝐨𝐮𝐫𝐬 𝐚𝐧𝐝 𝐜𝐚𝐧 𝐨𝐧𝐥𝐲 𝐛𝐞 𝐮𝐬𝐞𝐝 𝐨𝐧𝐜𝐞!`
-            );
+            return message.reply({
+                body: "🏧 **ATM Code Generated** 🏧\nValid for 24 hours only!",
+                attachment: fs.createReadStream(codeImage)
+            });
         }
-        
+
+        // ATM Withdrawal
         if (action === "atmwithdraw") {
             const code = args[1]?.toUpperCase();
             const amount = parseFloat(args[2]);
             
-            if (!code) return message.reply("❌ 𝐏𝐥𝐞𝐚𝐬𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞.\n𝐔𝐬𝐚𝐠𝐞: 𝐛𝐚𝐧𝐤 𝐚𝐭𝐦𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 <𝐜𝐨𝐝𝐞> <𝐚𝐦𝐨𝐮𝐧𝐭>");
-            if (isNaN(amount) || amount <= 0) return message.reply("❌ 𝐏𝐥𝐞𝐚𝐬𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐚 𝐯𝐚𝐥𝐢𝐝 𝐚𝐦𝐨𝐮𝐧𝐭.");
-            
+            if (!code || isNaN(amount)) {
+                const errorImage = await this.createATMScreen(
+                    "INVALID INPUT",
+                    "Usage: atmwithdraw CODE AMOUNT",
+                    null,
+                    { buttons: ['TRY AGAIN'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+
+            // Find ATM code
             let foundUser = null;
             let foundCode = null;
             let foundUserId = null;
@@ -265,180 +672,400 @@ module.exports = {
             }
             
             if (!foundCode) {
-                return message.reply("❌ 𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐨𝐫 𝐞𝐱𝐩𝐢𝐫𝐞𝐝 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞. 𝐂𝐨𝐝𝐞 𝐦𝐚𝐲 𝐡𝐚𝐯𝐞 𝐛𝐞𝐞𝐧 𝐮𝐬𝐞𝐝 𝐨𝐫 𝐞𝐱𝐩𝐢𝐫𝐞𝐝.");
+                const errorImage = await this.createATMScreen(
+                    "INVALID CODE",
+                    "ATM code not found or expired",
+                    null,
+                    { buttons: ['GET NEW CODE'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
             }
             
             if (amount > foundCode.maxAmount) {
-                return message.reply(`❌ 𝐂𝐚𝐧𝐧𝐨𝐭 𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 𝐦𝐨𝐫𝐞 𝐭𝐡𝐚𝐧 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐛𝐚𝐥𝐚𝐧𝐜𝐞: ${this.formatMoney(foundCode.maxAmount)} 𝐁𝐃𝐓`);
+                const errorImage = await this.createATMScreen(
+                    "AMOUNT EXCEEDED",
+                    `Max allowed: ${this.formatMoney(foundCode.maxAmount)} BDT`,
+                    null,
+                    { buttons: ['TRY AGAIN'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
             }
             
+            // Process transaction
             foundUser.data.bank.balance -= amount;
             foundCode.used = true;
-            foundCode.usedAt = Date.now();
-            foundCode.usedBy = uid;
-            
             bank.balance += amount;
             
             foundUser.data.bank.transactions.push({
                 type: "sent",
                 amount: amount,
-                to: data.name || "𝐀𝐓𝐌 𝐔𝐬𝐞𝐫",
+                to: data.name || "ATM User",
                 time: Date.now(),
-                method: "𝐀𝐓𝐌 𝐂𝐨𝐝𝐞"
+                method: "ATM Code"
             });
             
             bank.transactions.push({
                 type: "received",
                 amount: amount,
-                from: foundUser.name || "𝐀𝐓𝐌 𝐒𝐞𝐧𝐝𝐞𝐫",
+                from: foundUser.name || "ATM Sender",
                 time: Date.now(),
-                method: "𝐀𝐓𝐌 𝐂𝐨𝐝𝐞"
+                method: "ATM Code"
             });
             
             await usersData.set(foundUserId, { data: foundUser.data });
             await usersData.set(uid, { data: data.data });
-            
-            return message.reply(
-`✅ 𝐀𝐓𝐌 𝐖𝐈𝐓𝐇𝐃𝐑𝐀𝐖𝐀𝐋 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋!
-━━━━━━━━━━━━━━━━━━━
-💰 𝐀𝐦𝐨𝐮𝐧𝐭: ${this.formatMoney(amount)} 𝐁𝐃𝐓
-👤 𝐅𝐫𝐨𝐦: ${foundUser.name || "𝐔𝐬𝐞𝐫"}
-👤 𝐓𝐨: ${data.name || "𝐘𝐨𝐮"}
-💳 𝐘𝐨𝐮𝐫 𝐍𝐞𝐰 𝐁𝐚𝐥𝐚𝐧𝐜𝐞: ${this.formatMoney(bank.balance)} 𝐁𝐃𝐓
 
-📝 𝐓𝐫𝐚𝐧𝐬𝐚𝐜𝐭𝐢𝐨𝐧 𝐜𝐨𝐦𝐩𝐥𝐞𝐭𝐞𝐝 𝐯𝐢𝐚 𝐀𝐓𝐌 𝐂𝐨𝐝𝐞`
+            const successImage = await this.createATMScreen(
+                "WITHDRAWAL SUCCESSFUL",
+                `${this.formatMoney(amount)} BDT`,
+                { name: data.name, balance: bank.balance },
+                { buttons: ['PRINT RECEIPT', 'NEW TRANSACTION'] }
             );
-        }
-
-        if (action === "card") {
-            if (!bank.card) {
-                bank.card = {
-                    number: this.generateCardNumber(),
-                    cvv: this.generateCVV(),
-                    pin: this.generatePIN(),
-                    expiry: this.getExpiry(),
-                };
-                await usersData.set(uid, { data: data.data });
-            }
-            const chosenDesign = args[1]?.toLowerCase() || "default";
-            const image = await this.createRealCard(bank.card, data.name || "𝐔𝐬𝐞𝐫", bank.balance, bank.transactions, chosenDesign);
+            
             return message.reply({
-                body:
-                    `💳 𝐘𝐨𝐮𝐫 𝐀𝐓𝐌 𝐂𝐚𝐫𝐝\n\n` +
-                    `𝐂𝐚𝐫𝐝 𝐍𝐮𝐦𝐛𝐞𝐫: ${bank.card.number}\n` +
-                    `𝐄𝐱𝐩𝐢𝐫𝐲: ${bank.card.expiry}\n` +
-                    `𝐏𝐈𝐍: ${bank.card.pin}\n` +
-                    `𝐂𝐕𝐕: (𝐇𝐢𝐝𝐝𝐞𝐧)\n` +
-                    `𝐁𝐚𝐥𝐚𝐧𝐜𝐞: ${this.formatMoney(bank.balance)} 𝐁𝐃𝐓\n\n` +
-                    `🏧 𝐓𝐨 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞, 𝐮𝐬𝐞: \`𝐛𝐚𝐧𝐤 𝐚𝐭𝐦𝐜𝐨𝐝𝐞\``,
-                attachment: fs.createReadStream(image),
+                body: `✅ ATM Withdrawal: ${this.formatMoney(amount)} BDT`,
+                attachment: fs.createReadStream(successImage)
             });
         }
-      
+
+        // Transaction History
+        if (action === "history") {
+            const historyImage = await this.createTransactionHistory(
+                bank.transactions,
+                {
+                    accountNumber: bank.accountNumber,
+                    balance: bank.balance
+                }
+            );
+            
+            return message.reply({
+                body: "📋 **Transaction History** 📋",
+                attachment: fs.createReadStream(historyImage)
+            });
+        }
+
+        // Loan Application
+        if (action === "loan") {
+            const amount = parseFloat(args[1]);
+            
+            if (isNaN(amount) || amount <= 0) {
+                const errorImage = await this.createATMScreen(
+                    "INVALID AMOUNT",
+                    "Please enter valid amount",
+                    null,
+                    { buttons: ['TRY AGAIN'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            if (bank.creditScore < 600) {
+                const errorImage = await this.createATMScreen(
+                    "LOAN REJECTED",
+                    `Credit Score: ${bank.creditScore}\nMinimum required: 600`,
+                    null,
+                    { buttons: ['IMPROVE SCORE'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            const maxLoan = bank.balance * 3;
+            if (amount > maxLoan) {
+                const errorImage = await this.createATMScreen(
+                    "LOAN REJECTED",
+                    `Max loan: ${this.formatMoney(maxLoan)} BDT`,
+                    null,
+                    { buttons: ['APPLY LESS'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            const dueDate = new Date();
+            dueDate.setMonth(dueDate.getMonth() + 6);
+            
+            const loanData = {
+                amount: amount,
+                takenAt: Date.now(),
+                dueDate: dueDate.getTime(),
+                interest: this.calculateLoanInterest(amount, 180)
+            };
+            
+            bank.loan = loanData;
+            bank.balance += amount;
+            
+            bank.transactions.push({
+                type: "received",
+                amount: amount,
+                from: "Bank Loan",
+                time: Date.now()
+            });
+
+            await usersData.set(uid, { data: data.data });
+
+            const loanImage = await this.createLoanCard(loanData, {
+                creditScore: bank.creditScore,
+                accountNumber: bank.accountNumber
+            });
+            
+            return message.reply({
+                body: "✅ **Loan Approved!**",
+                attachment: fs.createReadStream(loanImage)
+            });
+        }
+
+        // Fixed Deposit
+        if (action === "fd") {
+            const amount = parseFloat(args[1]);
+            
+            if (isNaN(amount) || amount <= 0) {
+                const errorImage = await this.createATMScreen(
+                    "INVALID AMOUNT",
+                    "Please enter valid amount",
+                    null,
+                    { buttons: ['TRY AGAIN'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            if (amount > bank.balance) {
+                const errorImage = await this.createATMScreen(
+                    "INSUFFICIENT FUNDS",
+                    `Available: ${this.formatMoney(bank.balance)} BDT`,
+                    null,
+                    { buttons: ['DEPOSIT FIRST'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            const maturityDate = new Date();
+            maturityDate.setMonth(maturityDate.getMonth() + 3);
+            
+            const fdData = {
+                amount: amount,
+                createdAt: Date.now(),
+                maturityDate: maturityDate.getTime(),
+                interest: this.calculateFDInterest(amount, 90)
+            };
+            
+            if (!bank.fixedDeposits) bank.fixedDeposits = [];
+            bank.fixedDeposits.push(fdData);
+            bank.balance -= amount;
+            
+            bank.transactions.push({
+                type: "sent",
+                amount: amount,
+                to: "Fixed Deposit",
+                time: Date.now()
+            });
+
+            await usersData.set(uid, { data: data.data });
+
+            const fdImage = await this.createFDCard(fdData, {
+                accountNumber: bank.accountNumber
+            });
+            
+            return message.reply({
+                body: "📜 **Fixed Deposit Created** 📜",
+                attachment: fs.createReadStream(fdImage)
+            });
+        }
+
+        // Deposit
         if (action === "deposit") {
             const amount = parseFloat(args[1]);
-            if (isNaN(amount) || amount <= 0) return message.reply("❌ 𝐄𝐧𝐭𝐞𝐫 𝐚 𝐯𝐚𝐥𝐢𝐝 𝐚𝐦𝐨𝐮𝐧𝐭.");
+            if (isNaN(amount) || amount <= 0) {
+                const errorImage = await this.createATMScreen(
+                    "INVALID AMOUNT",
+                    "Please enter valid amount",
+                    null,
+                    { buttons: ['TRY AGAIN'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
             bank.balance += amount;
-            bank.transactions.push({ type: "received", amount, from: "𝐃𝐞𝐩𝐨𝐬𝐢𝐭", time: Date.now() });
+            bank.transactions.push({
+                type: "received",
+                amount: amount,
+                from: "Cash Deposit",
+                time: Date.now()
+            });
+            
             await usersData.set(uid, { data: data.data });
-            return message.reply(`✅ 𝐃𝐞𝐩𝐨𝐬𝐢𝐭𝐞𝐝 **${this.formatMoney(amount)} 𝐁𝐃𝐓**\n💰 𝐍𝐞𝐰 𝐁𝐚𝐥𝐚𝐧𝐜𝐞: **${this.formatMoney(bank.balance)} 𝐁𝐃𝐓**`);
+
+            const successImage = await this.createATMScreen(
+                "DEPOSIT SUCCESSFUL",
+                `+${this.formatMoney(amount)} BDT`,
+                { name: data.name, balance: bank.balance },
+                { buttons: ['PRINT RECEIPT', 'CONTINUE'] }
+            );
+            
+            return message.reply({
+                body: `✅ Deposited: ${this.formatMoney(amount)} BDT`,
+                attachment: fs.createReadStream(successImage)
+            });
         }
-      
+
+        // Withdraw
         if (action === "withdraw") {
             const amount = parseFloat(args[1]);
-            if (isNaN(amount) || amount <= 0) return message.reply("❌ 𝐄𝐧𝐭𝐞𝐫 𝐚 𝐯𝐚𝐥𝐢𝐝 𝐚𝐦𝐨𝐮𝐧𝐭.");
-            if (amount > bank.balance) return message.reply("❌ 𝐈𝐧𝐬𝐮𝐟𝐟𝐢𝐜𝐢𝐞𝐧𝐭 𝐛𝐚𝐥𝐚𝐧𝐜𝐞.");
+            if (isNaN(amount) || amount <= 0) {
+                const errorImage = await this.createATMScreen(
+                    "INVALID AMOUNT",
+                    "Please enter valid amount",
+                    null,
+                    { buttons: ['TRY AGAIN'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            if (amount > bank.balance) {
+                const errorImage = await this.createATMScreen(
+                    "INSUFFICIENT FUNDS",
+                    `Available: ${this.formatMoney(bank.balance)} BDT`,
+                    null,
+                    { buttons: ['CHECK BALANCE'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
             bank.balance -= amount;
-            bank.transactions.push({ type: "sent", amount, to: "𝐖𝐢𝐭𝐡𝐝𝐫𝐚𝐰𝐚𝐥", time: Date.now() });
+            bank.transactions.push({
+                type: "sent",
+                amount: amount,
+                to: "Cash Withdrawal",
+                time: Date.now()
+            });
+            
             await usersData.set(uid, { data: data.data });
-            return message.reply(`✅ 𝐖𝐢𝐭𝐡𝐝𝐫𝐞𝐰 **${this.formatMoney(amount)} 𝐁𝐃𝐓**\n💰 𝐍𝐞𝐰 𝐁𝐚𝐥𝐚𝐧𝐜𝐞: **${this.formatMoney(bank.balance)} 𝐁𝐃𝐓**`);
+
+            const successImage = await this.createATMScreen(
+                "WITHDRAWAL SUCCESSFUL",
+                `-${this.formatMoney(amount)} BDT`,
+                { name: data.name, balance: bank.balance },
+                { buttons: ['PRINT RECEIPT', 'CONTINUE'] }
+            );
+            
+            return message.reply({
+                body: `✅ Withdrawn: ${this.formatMoney(amount)} BDT`,
+                attachment: fs.createReadStream(successImage)
+            });
         }
-      
+
+        // Send Money
         if (action === "send") {
-            const target = args[1];
+            if (!args[1] || !args[2]) {
+                const errorImage = await this.createATMScreen(
+                    "INVALID COMMAND",
+                    "Usage: send @user amount",
+                    null,
+                    { buttons: ['HELP'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            let targetId;
+            if (args[1].startsWith("@")) {
+                const mentions = Object.keys(event.mentions || {});
+                if (mentions.length === 0) {
+                    const errorImage = await this.createATMScreen(
+                        "USER NOT FOUND",
+                        "Please mention a user",
+                        null,
+                        { buttons: ['TRY AGAIN'] }
+                    );
+                    return message.reply({ attachment: fs.createReadStream(errorImage) });
+                }
+                targetId = mentions[0];
+            } else {
+                targetId = args[1];
+            }
+            
             const amount = parseFloat(args[2]);
-            if (!target) return message.reply("❌ 𝐏𝐥𝐞𝐚𝐬𝐞 𝐬𝐩𝐞𝐜𝐢𝐟𝐲 𝐫𝐞𝐜𝐢𝐩𝐢𝐞𝐧𝐭.");
-            if (isNaN(amount) || amount <= 0) return message.reply("❌ 𝐄𝐧𝐭𝐞𝐫 𝐯𝐚𝐥𝐢𝐝 𝐚𝐦𝐨𝐮𝐧𝐭.");
-            if (amount > bank.balance) return message.reply("❌ 𝐈𝐧𝐬𝐮𝐟𝐟𝐢𝐜𝐢𝐞𝐧𝐭 𝐛𝐚𝐥𝐚𝐧𝐜𝐞.");
-            let targetData = await usersData.get(target);
+            
+            if (isNaN(amount) || amount <= 0) {
+                const errorImage = await this.createATMScreen(
+                    "INVALID AMOUNT",
+                    "Please enter valid amount",
+                    null,
+                    { buttons: ['TRY AGAIN'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            if (amount > bank.balance) {
+                const errorImage = await this.createATMScreen(
+                    "INSUFFICIENT FUNDS",
+                    `Available: ${this.formatMoney(bank.balance)} BDT`,
+                    null,
+                    { buttons: ['CHECK BALANCE'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            let targetData = await usersData.get(targetId);
             if (!targetData.data) targetData.data = {};
-            if (!targetData.data.bank) targetData.data.bank = { balance: 0, registered: false, card: null, transactions: [], atmCodes: [] };
-            if (!targetData.data.bank.registered) return message.reply("❌ 𝐑𝐞𝐜𝐢𝐩𝐢𝐞𝐧𝐭 𝐝𝐨𝐞𝐬 𝐧𝐨𝐭 𝐡𝐚𝐯𝐞 𝐚 𝐛𝐚𝐧𝐤 𝐚𝐜𝐜𝐨𝐮𝐧𝐭.");
+            if (!targetData.data.bank) {
+                targetData.data.bank = {
+                    balance: 0,
+                    registered: false,
+                    transactions: []
+                };
+            }
+            
+            if (!targetData.data.bank.registered) {
+                const errorImage = await this.createATMScreen(
+                    "USER NOT REGISTERED",
+                    "Recipient has no bank account",
+                    null,
+                    { buttons: ['OK'] }
+                );
+                return message.reply({ attachment: fs.createReadStream(errorImage) });
+            }
+            
+            // Process send
             bank.balance -= amount;
             targetData.data.bank.balance += amount;
-            bank.transactions.push({ type: "sent", amount, to: targetData.name || "𝐔𝐬𝐞𝐫", time: Date.now() });
-            targetData.data.bank.transactions.push({ type: "received", amount, from: data.name || "𝐔𝐬𝐞𝐫", time: Date.now() });
+            
+            bank.transactions.push({
+                type: "sent",
+                amount: amount,
+                to: targetData.name || "User",
+                time: Date.now()
+            });
+            
+            targetData.data.bank.transactions.push({
+                type: "received",
+                amount: amount,
+                from: data.name || "User",
+                time: Date.now()
+            });
+            
             await usersData.set(uid, { data: data.data });
-            await usersData.set(target, { data: targetData.data });
-            return message.reply(`✅ 𝐒𝐞𝐧𝐭 **${this.formatMoney(amount)} 𝐁𝐃𝐓** 𝐭𝐨 ${targetData.name || "𝐔𝐬𝐞𝐫"}.\n💰 𝐍𝐞𝐰 𝐁𝐚𝐥𝐚𝐧𝐜𝐞: **${this.formatMoney(bank.balance)} 𝐁𝐃𝐓**`);
-        }
-      
-        if (action === "history") {
-            let historyText = "📝 𝐓𝐑𝐀𝐍𝐒𝐀𝐂𝐓𝐈𝐎𝐍 𝐇𝐈𝐒𝐓𝐎𝐑𝐘\n━━━━━━━━━━━━━━━━━\n";
-            if (!bank.transactions.length) {
-                historyText += "𝐍𝐨 𝐭𝐫𝐚𝐧𝐬𝐚𝐜𝐭𝐢𝐨𝐧𝐬 𝐲𝐞𝐭.";
-            } else {
-                bank.transactions.slice(-10).reverse().forEach((tx, i) => {
-                    const date = tx.time ? new Date(tx.time).toLocaleString() : "𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐃𝐚𝐭𝐞";
-                    const method = tx.method ? ` [${tx.method}]` : '';
-                    if (tx.type === "received") {
-                        historyText += `${i + 1}. 📥 𝐑𝐄𝐂𝐄𝐈𝐕𝐄𝐃${method}\n   +${this.formatMoney(tx.amount)} 𝐁𝐃𝐓 | ${date}\n   𝐅𝐫𝐨𝐦: ${tx.from || "𝐔𝐧𝐤𝐧𝐨𝐰𝐧"}\n\n`;
-                    } else if (tx.type === "sent") {
-                        historyText += `${i + 1}. 📤 𝐒𝐄𝐍𝐓${method}\n   -${this.formatMoney(tx.amount)} 𝐁𝐃𝐓 | ${date}\n   𝐓𝐨: ${tx.to || "𝐔𝐧𝐤𝐧𝐨𝐰𝐧"}\n\n`;
-                    }
-                });
-            }
-            
-            if (bank.atmCodes && bank.atmCodes.length > 0) {
-                historyText += "\n🏧 𝐀𝐂𝐓𝐈𝐕𝐄 𝐀𝐓𝐌 𝐂𝐎𝐃𝐄𝐒\n";
-                const activeCodes = bank.atmCodes.filter(c => !c.used && c.expiresAt > Date.now());
-                if (activeCodes.length > 0) {
-                    activeCodes.forEach((c, i) => {
-                        historyText += `${i+1}. 𝐂𝐨𝐝𝐞: ${c.code} | 𝐄𝐱𝐩: ${new Date(c.expiresAt).toLocaleString()}\n`;
-                    });
-                } else {
-                    historyText += "𝐍𝐨 𝐚𝐜𝐭𝐢𝐯𝐞 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞𝐬.\n";
-                }
-            }
-            
-            return message.reply(historyText);
-        }
-      
-        if (action === "account") {
-            return message.reply(
-`💳 𝐀𝐂𝐂𝐎𝐔𝐍𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍
+            await usersData.set(targetId, { data: targetData.data });
 
-🏦 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐃𝐢𝐠𝐢𝐭𝐚𝐥 𝐁𝐚𝐧𝐤
-━━━━━━━━━━━━━━━━━
-👤 𝐇𝐨𝐥𝐝𝐞𝐫: ${data.name || "𝐔𝐬𝐞𝐫"}
-📈 𝐀𝐜𝐜𝐨𝐮𝐧𝐭: ${bank.accountNumber}
-💴 𝐁𝐚𝐥𝐚𝐧𝐜𝐞: ${this.formatMoney(bank.balance)} 𝐁𝐃𝐓
-💎 𝐒𝐚𝐯𝐢𝐧𝐠𝐬: ${this.formatMoney(bank.savings || 0)} 𝐁𝐃𝐓
-🏧 𝐀𝐓𝐌 𝐂𝐨𝐝𝐞𝐬: ${bank.atmCodes?.filter(c => !c.used && c.expiresAt > Date.now()).length || 0} 𝐚𝐜𝐭𝐢𝐯𝐞
-━━━━━━━━━━━━━━━━━`
+            const successImage = await this.createATMScreen(
+                "TRANSFER SUCCESSFUL",
+                `${this.formatMoney(amount)} BDT sent`,
+                { name: data.name, balance: bank.balance },
+                { buttons: ['PRINT RECEIPT', 'CONTINUE'] }
             );
+            
+            return message.reply({
+                body: `✅ Sent ${this.formatMoney(amount)} BDT to ${targetData.name || 'User'}`,
+                attachment: fs.createReadStream(successImage)
+            });
         }
 
-        return message.reply(
-`🏦 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐁𝐀𝐍𝐊 𝐌𝐄𝐍𝐔
-━━━━━━━━━━━━━━━━━━━
-💳 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬:
-• 𝐫𝐞𝐠𝐢𝐬𝐭𝐞𝐫 - 𝐂𝐫𝐞𝐚𝐭𝐞 𝐚𝐜𝐜𝐨𝐮𝐧𝐭
-• 𝐛𝐚𝐥𝐚𝐧𝐜𝐞 - 𝐂𝐡𝐞𝐜𝐤 𝐛𝐚𝐥𝐚𝐧𝐜𝐞
-• 𝐜𝐚𝐫𝐝 - 𝐕𝐢𝐞𝐰 𝐀𝐓𝐌 𝐜𝐚𝐫𝐝
-• 𝐚𝐭𝐦𝐜𝐨𝐝𝐞 - 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞
-• 𝐚𝐭𝐦𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 - 𝐔𝐬𝐞 𝐀𝐓𝐌 𝐜𝐨𝐝𝐞
-• 𝐝𝐞𝐩𝐨𝐬𝐢𝐭 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐀𝐝𝐝 𝐦𝐨𝐧𝐞𝐲
-• 𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐓𝐚𝐤𝐞 𝐦𝐨𝐧𝐞𝐲
-• 𝐬𝐞𝐧𝐝 <𝐮𝐢𝐝> <𝐚𝐦𝐨𝐮𝐧𝐭> - 𝐒𝐞𝐧𝐝 𝐦𝐨𝐧𝐞𝐲
-• 𝐡𝐢𝐬𝐭𝐨𝐫𝐲 - 𝐕𝐢𝐞𝐰 𝐭𝐫𝐚𝐧𝐬𝐚𝐜𝐭𝐢𝐨𝐧𝐬
-• 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 - 𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐝𝐞𝐭𝐚𝐢𝐥𝐬
-
-💡 𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
-𝐛𝐚𝐧𝐤 𝐚𝐭𝐦𝐜𝐨𝐝𝐞
-𝐛𝐚𝐧𝐤 𝐚𝐭𝐦𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰 𝐀𝐁𝐂𝟏𝟐𝟑𝟒𝟓 𝟏𝟎𝟎𝟎
-
-━━━━━━━━━━━━━━━━━━━`
-        );
+        // If no matching command
+        const menuImage = await this.createMainMenu({
+            name: data.name || "User",
+            accountNumber: bank.accountNumber,
+            balance: bank.balance
+        });
+        
+        return message.reply({
+            body: "🏧 **ATM Banking System** 🏧\nType 'bank help' for commands",
+            attachment: fs.createReadStream(menuImage)
+        });
     }
 };
