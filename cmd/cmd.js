@@ -63,9 +63,8 @@ module.exports = {
 			missingFileNameInstall: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗧𝗵𝗶𝗲̂́𝘂 𝘁𝗲̂𝗻 𝗳𝗶𝗹𝗲!\n│ 📝 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗻𝗵𝗮̣̂𝗽 𝘁𝗲̂𝗻 𝗳𝗶𝗹𝗲 (.𝗷𝘀)\n│ 𝗲̂̉ 𝗹𝘂̛𝘂 𝗹𝗲̣̂𝗻𝗵\n└─❖",
 			invalidUrl: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗨𝗥𝗟 𝗸𝗵𝗼̂𝗻𝗴 𝗵𝗼̛̣𝗽 𝗹𝗲̣!\n│ 📝 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗻𝗵𝗮̣̂𝗽 𝘂𝗿𝗹 𝗵𝗼̛̣𝗽 𝗹𝗲̣\n└─❖",
 			invalidUrlOrCode: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗞𝗵𝗼̂𝗻𝗴 𝗹𝗮̂́𝘆 đ𝘂̛𝗼̛̣𝗰 𝗰𝗼𝗱𝗲!\n│ 📝 𝗞𝗵𝗼̂𝗻𝗴 𝘁𝗶̀𝗺 𝘁𝗵𝗮̂́𝘆 𝗺𝗮̃ 𝗹𝗲̣̂𝗻𝗵\n│ 𝗵𝗼𝗮̣̆𝗰 𝘂𝗿𝗹 𝗸𝗵𝗼̂𝗻𝗴 𝗵𝗼̛̣𝗽 𝗹𝗲̣\n└─❖",
-			alreadExist: "┌─❖\n│ ⚠️ 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ 📁 𝗙𝗶𝗹𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝗲𝘅𝗶𝘀𝘁𝘀!\n│ 🎯 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📝 𝗢𝘃𝗲𝗿𝘄𝗿𝗶𝘁𝗲 𝗲𝘅𝗶𝘀𝘁𝗶𝗻𝗴 𝗳𝗶𝗹𝗲?\n│ 💡 𝗥𝗲𝗮𝗰𝘁 𝘁𝗼 𝘁𝗵𝗶𝘀 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝘁𝗼 𝗰𝗼𝗻𝗳𝗶𝗿𝗺\n└─❖",
-			installed: "┌─❖\n│ 🚀 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📍 𝗣𝗮𝘁𝗵: %2\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗔𝗰𝘁𝗶𝘃𝗲\n└─❖",
-			installedError: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ ⚠️ 𝗘𝗿𝗿𝗼𝗿: %2\n│ 📝 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n└─❖",
+			installed: "━━━━━━━━━━━━━━━━━\n✓𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n📶 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗔𝗰𝘁𝗶𝘃𝗲\n🔁 𝗣𝗮𝘁𝗵: %2\n━━━━━━━━━━━━━━━━━",
+			installedError: "━━━━━━━━━━━━━━━━━\n✖ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗙𝗔𝗜𝗟𝗘𝗗!\n📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n⛔ 𝗘𝗿𝗿𝗼𝗿: %2\n✉️ 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n━━━━━━━━━━━━━━━━━",
 			missingFile: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗙𝗜𝗟𝗘 𝗡𝗢𝗧 𝗙𝗢𝗨𝗡𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📝 𝗖𝗵𝗲𝗰𝗸 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲 𝗼𝗿 𝗽𝗮𝘁𝗵\n└─❖",
 			invalidFileName: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘!\n│ 📁 𝗙𝗶𝗹𝗲: %1\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝘂𝘀𝗲 𝗮 𝘃𝗮𝗹𝗶𝗱 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲\n└─❖",
 			unloadedFile: "┌─❖\n│ 🚀 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗨𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗜𝗻𝗮𝗰𝘁𝗶𝘃𝗲\n└─❖"
@@ -85,9 +84,8 @@ module.exports = {
 			missingFileNameInstall: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗠𝗜𝗦𝗦𝗜𝗡𝗚 𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘!\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲 (.𝗷𝘀)\n│ 𝘁𝗼 𝘀𝗮𝘃𝗲 𝘁𝗵𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱\n└─❖",
 			invalidUrl: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗨𝗥𝗟!\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝗮 𝘃𝗮𝗹𝗶𝗱 𝘂𝗿𝗹\n└─❖",
 			invalidUrlOrCode: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗖𝗔𝗡'𝗧 𝗚𝗘𝗧 𝗖𝗢𝗗𝗘!\n│ 📝 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗿𝗲𝘁𝗿𝗶𝗲𝘃𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗰𝗼𝗱𝗲\n│ 𝗼𝗿 𝗶𝗻𝘃𝗮𝗹𝗶𝗱 𝘂𝗿𝗹\n└─❖",
-			alreadExist: "┌─❖\n│ ⚠️ 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ 📁 𝗙𝗜𝗟𝗘 𝗔𝗟𝗥𝗘𝗔𝗗𝗬 𝗘𝗫𝗜𝗦𝗧𝗦!\n│ 🎯 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📝 𝗢𝘃𝗲𝗿𝘄𝗿𝗶𝘁𝗶𝗻𝗴 𝗲𝘅𝗶𝘀𝘁𝗶𝗻𝗴 𝗳𝗶𝗹𝗲...\n└─❖",
-			installed: "┌─❖\n│ 🚀 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📍 𝗣𝗮𝘁𝗵: %2\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗔𝗰𝘁𝗶𝘃𝗲\n└─❖",
-			installedError: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ ⚠️ 𝗘𝗿𝗿𝗼𝗿: %2\n│ 📝 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n└─❖",
+			installed: "━━━━━━━━━━━━━━━━━\n✓𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n📶 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗔𝗰𝘁𝗶𝘃𝗲\n🔁 𝗣𝗮𝘁𝗵: %2\n━━━━━━━━━━━━━━━━━",
+			installedError: "━━━━━━━━━━━━━━━━━\n✖ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗙𝗔𝗜𝗟𝗘𝗗!\n📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n⛔ 𝗘𝗿𝗿𝗼𝗿: %2\n✉️ 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n━━━━━━━━━━━━━━━━━",
 			missingFile: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗙𝗜𝗟𝗘 𝗡𝗢𝗧 𝗙𝗢𝗨𝗡𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📝 𝗖𝗵𝗲𝗰𝗸 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲 𝗼𝗿 𝗽𝗮𝘁𝗵\n└─❖",
 			invalidFileName: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘!\n│ 📁 𝗙𝗶𝗹𝗲: %1\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝘂𝘀𝗲 𝗮 𝘃𝗮𝗹𝗶𝗱 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲\n└─❖",
 			unloadedFile: "┌─❖\n│ 🚀 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗨𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗜𝗻𝗮𝗰𝘁𝗶𝘃𝗲\n└─❖"
@@ -241,19 +239,16 @@ module.exports = {
 			if (!rawCode)
 				return message.reply(getLang("invalidUrlOrCode"));
 
-			// AUTO OVERWRITE - No confirmation needed
+			// SILENT OVERWRITE - Delete old file if exists (no message)
 			if (fs.existsSync(path.join(__dirname, fileName))) {
-				// Delete old file first
 				try {
 					fs.unlinkSync(path.join(__dirname, fileName));
 				} catch (err) {
-					// Ignore error if can't delete
+					// Ignore error
 				}
-				// Show overwriting message
-				await message.reply(getLang("alreadExist", fileName));
 			}
 
-			// Direct install (overwrite if exists)
+			// Direct install
 			const infoLoad = loadScripts("cmds", fileName, log, configCommands, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getLang, rawCode);
 			infoLoad.status == "success" ?
 				message.reply(getLang("installed", infoLoad.name, path.join(__dirname, fileName).replace(process.cwd(), ""))) :
