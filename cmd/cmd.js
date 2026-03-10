@@ -28,7 +28,7 @@ module.exports = {
 	config: {
 		name: "cmd",
 		version: "1.17",
-		author: "NTKhang |Azadx69x",
+		author: "NTKhang | Azadx69x",
 		countDown: 5,
 		role: 4,
 		description: {
